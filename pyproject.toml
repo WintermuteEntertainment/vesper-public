@@ -21,3 +21,6 @@ vesper-mcp = "elite_companion.mcp_server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+elite_companion = ["data/*.json", "web/*.html", "locales/*.json"]
