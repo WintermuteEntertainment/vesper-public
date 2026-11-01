@@ -126,8 +126,20 @@ code = "fr"
   in Windows Settings > Time & language > Speech > Add voices, then check it shows up with
   `.venv\Scriptsesper copilot --voices`.
 
-Still English for now: the spoken callouts ("Shields down") and the short fixed commands ("quiet",
-"callouts on").
+- **Callouts and commands:** French (fr), German (de), Spanish (es), Russian (ru) and Brazilian Portuguese (pt)
+  have translated callouts, readouts and short commands ("silence", "Ruhe", "тишина"...). In any language
+  you can also just ask her to mute or restore the callouts. Other languages fall back to English callouts.
+
+The translations are first drafts written with Claude and not yet checked by native speakers. Corrections
+are very welcome.
+
+### Improving a translation
+
+Each language is one file in [`src/elite_companion/locales/`](src/elite_companion/locales). The English
+originals, and what every line is for, are in [`phrases.py`](src/elite_companion/phrases.py). Keep the
+words in braces (`{pilot}`, `{n}`) as they are, though you may leave some out. A phrase with "one" and "other"
+(plus "few" and "many" in Russian and Polish) is chosen by the number. To add a language, copy a file, name it
+after the language's two-letter code, and translate it. Run the tests to check your file.
 
 ## Second screen
 

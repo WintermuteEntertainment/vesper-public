@@ -19,6 +19,7 @@ from pathlib import Path
 
 import anthropic
 
+from .phrases import t
 from .language import answer_rule
 from .config import HOME
 from .memory import describe_note
@@ -35,20 +36,9 @@ PRICES = {
     "claude-haiku-5-5": (0.10, 0.50),
 }
 # Galaxy searches that can take a while, and what to say while they run.
-SLOW_TOOLS = {
-    "find_service": "Searching, this can take half a minute.",
-    "plot_route": "Plotting, one moment.",
-    "trade_between": "Comparing markets, one moment.",
-    "find_best_price": "Checking prices, one moment.",
-    "best_trades": "Checking the best trades, give me half a minute.",
-    "trades_along_missions": "Checking trades along your missions, this can take a minute.",
-    "write_captains_log": "Writing up your log, give me half a minute.",
-    "find_mining_hotspots": "Looking for hotspots, one moment.",
-    "web_search": "Searching the web, one moment.",
-    "plan_mining_run": "Planning that run, give me half a minute.",
-    "get_hold_value": "Pricing your hold, one moment.",
-    "find_home_base": "That's a big search. Give me up to a couple of minutes.",
-}
+SLOW_TOOLS = {"find_service", "plot_route", "trade_between", "find_best_price", "best_trades",
+              "trades_along_missions", "write_captains_log", "find_mining_hotspots", "web_search",
+              "plan_mining_run", "get_hold_value", "find_home_base"}  # phrases: slow_<name>
 # Questions that ask for the stronger model outright.
 HARD_PREFIX = re.compile(r"^\W*(think (hard|harder|carefully|it through)|ask (sonnet|the big (model|brain))|"
                          r"take your time|big brain)\b[\s,:.-]*", re.I)
@@ -410,7 +400,7 @@ class Brain:
             self._log_usage(response.usage, "[hard] " + question, self.hard_model)
             messages.append({"role": "assistant", "content": response.content})
             if response.stop_reason == "refusal":
-                return "I can't help with that one."
+                return t("cant_help")
             if response.stop_reason == "pause_turn":
                 continue
             tool_uses = [b for b in response.content if b.type == "tool_use"]
@@ -419,7 +409,7 @@ class Brain:
                 return said or "I don't have an answer for that."
             slow = [b.name for b in tool_uses if b.name in SLOW_TOOLS]
             if slow and self.on_slow_tool:
-                self.on_slow_tool(SLOW_TOOLS[slow[0]])
+                self.on_slow_tool(t("slow_" + slow[0]))
             messages.append({"role": "user", "content": [self._run_tool(b) for b in tool_uses]})
         return said or "That took too many steps; try asking a simpler way."
 
@@ -446,10 +436,10 @@ class Brain:
     def set_local(self, on: bool) -> str:
         """Switch between Claude and the local model ("go local" / "back to Claude")."""
         if on and not self.local_cfg.get("base_url"):
-            return "No local model is set up in config."
+            return t("local_not_set_up")
         self.local_mode = on
         self.reset()
-        return "Local mode." if on else "Back on Claude."
+        return t("local_mode") if on else t("back_on_claude")
 
     def warm_local(self) -> bool:
         """Load the local model (llama-swap loads on first request; can take half a minute)."""
@@ -509,7 +499,7 @@ class Brain:
                     return said or "I don't have an answer for that."
                 slow = [c["function"]["name"] for c in calls if c["function"]["name"] in SLOW_TOOLS]
                 if slow and self.on_slow_tool:
-                    self.on_slow_tool(SLOW_TOOLS[slow[0]])
+                    self.on_slow_tool(t("slow_" + slow[0]))
                 for c in calls:
                     name = c["function"]["name"]
                     try:
@@ -524,9 +514,9 @@ class Brain:
         except OSError as e:  # URLError, HTTPError and timeouts
             log.warning("local model failed: %s", e)
             self.local_history = []
-            return "I can't reach the local model. Say go cloud to switch back to Claude."
+            return t("cant_reach_local")
         self.local_history = []
-        return "That took too many steps; try asking a simpler way."
+        return t("too_many_steps")
 
     def ask(self, question: str) -> str:
         """Answer one question in words to speak. Goes local in local mode, or to hard_model for
@@ -538,7 +528,7 @@ class Brain:
         if hard and self.hard_model:
             question = question[hard.end():] or question
         if spent_today(self.usage_log) >= self.budget:
-            raise BudgetExceeded(f"Today's Claude budget of {self.budget:.2f} dollars is used up.")
+            raise BudgetExceeded(t("budget_exceeded", budget=f"{self.budget:.2f}"))
         idle = time.monotonic() - self.last_asked > self.idle_reset_s
         if self.turns >= self.max_turns or idle:
             self.reset()  # start fresh rather than trimming (editing history breaks thinking blocks)
@@ -559,7 +549,7 @@ class Brain:
             messages.append({"role": "assistant", "content": response.content})
             if response.stop_reason == "refusal":
                 self.reset()
-                return "I can't help with that one."
+                return t("cant_help")
             if response.stop_reason == "pause_turn":
                 continue  # web search still running server-side: re-send as is and it resumes
             tool_uses = [b for b in response.content if b.type == "tool_use"]
@@ -571,11 +561,11 @@ class Brain:
             results = []
             slow = [b.name for b in tool_uses if b.name in SLOW_TOOLS]
             if slow and self.on_slow_tool:
-                self.on_slow_tool(SLOW_TOOLS[slow[0]])
+                self.on_slow_tool(t("slow_" + slow[0]))
             for block in tool_uses:
                 if block.name == "think_harder":
                     if self.on_slow_tool:
-                        self.on_slow_tool("Let me think about that one properly.")
+                        self.on_slow_tool(t("thinking_harder"))
                     try:
                         answer = self._ask_hard(prompt, question, self.history)
                         content = f"Answer from the stronger model. Say it as is, nothing added:\n{answer}"
@@ -589,7 +579,7 @@ class Brain:
                 self.reset()
                 raise BudgetExceeded("I hit today's budget partway through that one.")
         self.reset()
-        return "That took too many steps; try asking a simpler way."
+        return t("too_many_steps")
 
 
 def _plain(history: list[dict]) -> list[dict]:
@@ -619,12 +609,12 @@ def spoken_error(e: Exception) -> str:
     if isinstance(e, BudgetExceeded):
         return str(e)
     if isinstance(e, anthropic.AuthenticationError):
-        return "My Claude API key isn't working. Check ANTHROPIC_API_KEY."
+        return t("bad_api_key")
     if isinstance(e, anthropic.RateLimitError):
-        return "Claude is rate limiting me. Try again in a minute."
+        return t("rate_limited")
     if isinstance(e, anthropic.APIConnectionError):
-        return "I can't reach Claude right now."
+        return t("cant_reach_claude")
     if isinstance(e, anthropic.APIStatusError):
-        return f"Claude returned an error, status {e.status_code}."
+        return t("api_error", status=e.status_code)
     log.exception("copilot error")
-    return "Something went wrong with that question."
+    return t("went_wrong")

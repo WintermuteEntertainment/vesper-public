@@ -19,6 +19,8 @@ import winsound
 from datetime import datetime
 from pathlib import Path
 
+from .phrases import t
+from . import phrases
 from . import language
 from . import config as config_mod
 from .lookout import Lookout
@@ -62,8 +64,8 @@ def paste_clipboard() -> str:
     sent = user32.SendInput(len(keys), inputs, ctypes.sizeof(INPUT))
     log.info("paste: sent %s of 4 key events to %r", sent, window.value)
     if sent != len(keys):
-        return "Windows blocked the paste. Press Control V yourself."
-    return f"Pasted into {window.value or 'the active window'}."
+        return t("paste_blocked")
+    return t("pasted", window=window.value or t("the_active_window"))
 
 
 def _language_voice(cfg: dict) -> str:
@@ -141,6 +143,43 @@ COMMANDS = [
 ]
 
 
+def _any_words(text: str) -> list[str]:
+    """Lower-case words of a phrase, in any alphabet, without punctuation."""
+    return re.findall(r"[\w']+", text.lower())
+
+
+def translated_command(text: str) -> str | None:
+    """The fixed command in the configured language's locale file that `text` is, as a whole, give or
+    take the language's polite padding words; None if it isn't one. English uses COMMANDS instead."""
+    table = phrases.commands()
+    if not table:
+        return None
+    words = _any_words(text)
+    pads = sorted((_any_words(p) for p in phrases.padding()), key=len, reverse=True)
+    trimmed = True
+    while trimmed and words:
+        trimmed = False
+        for pad in pads:
+            if pad and words[:len(pad)] == pad:
+                words, trimmed = words[len(pad):], True
+            elif pad and words[-len(pad):] == pad:
+                words, trimmed = words[:-len(pad)], True
+    for action, said in table.items():
+        if words and any(words == _any_words(p) for p in said):
+            return action
+    return None
+
+
+CALLOUTS_SPEC = {
+    "name": "set_callouts",
+    "description": "Switch Vesper's own spoken callouts: all, critical (only urgent ones like interdictions and "
+                   "hull damage) or off. Use when the commander asks to mute, quiet down or restore the "
+                   "callouts, in any language.",
+    "input_schema": {"type": "object", "properties": {"mode": {"type": "string", "enum": ["all", "critical", "off"]}},
+                     "required": ["mode"]},
+}
+
+
 LOG_DIR = config_mod.HOME / "logs"
 COMMAND_MAX_WORDS = 6  # longer utterances are questions, even if they contain "start over"
 
@@ -152,6 +191,7 @@ class Copilot:
     def __init__(self, cfg: dict | None = None, watcher: Watcher | None = None, speak: bool = True,
                  notes: MemoryStore | None = None, log_dir: Path | None = LOG_DIR):
         self.cfg = cfg or config_mod.load()
+        phrases.set_language(language.code(self.cfg))  # before anything is said
         self.watcher = watcher or Watcher()
         self.notes = notes or MemoryStore()
         self.tools = GameTools(self.watcher, self.notes)
@@ -174,7 +214,8 @@ class Copilot:
                             extra_tools={"write_captains_log": (LOGBOOK_SPEC, _write_log),
                                          "paste_clipboard": (PASTE_SPEC, lambda: {"result": paste_clipboard()}),
                                          "look_at_screen": (SCREEN_SPEC, _look_at_screen),
-                                         "read_contacts": (CONTACTS_SPEC, self._read_contacts)},
+                                         "read_contacts": (CONTACTS_SPEC, self._read_contacts),
+                                         "set_callouts": (CALLOUTS_SPEC, self._set_callouts)},
                             hard_model=b["hard_model"], hard_effort=b["hard_effort"], local=self.cfg["local"],
                             web_search=b["web_search"], search=self.cfg["search"],
                             language=language.code(self.cfg))
@@ -230,8 +271,10 @@ class Copilot:
             for pattern, action in COMMANDS:
                 if pattern.search(low):
                     return self._command(action)
+            if action := translated_command(text):
+                return self._command(action)
         if self.brain is None:
-            reply = "Questions need a Claude API key. Set ANTHROPIC_API_KEY and restart me."
+            reply = t("needs_api_key")
         else:
             try:
                 reply = self.brain.ask(text)
@@ -258,34 +301,41 @@ class Copilot:
     def _warm_local(self) -> None:
         """Load the local model now so the first question isn't slow."""
         if self.brain.warm_local():
-            self.say("Local model ready.")
+            self.say(t("local_ready"))
         else:
-            self.say("The local model isn't answering. Say go cloud to switch back to Claude.")
+            self.say(t("local_not_answering"))
+
+    def _set_callouts(self, mode: str) -> dict:
+        """The set_callouts tool: what the fixed "quiet" / "callouts on" commands do, for any language."""
+        if mode not in ("all", "critical", "off"):
+            return {"error": "mode must be all, critical or off"}
+        self.callouts.set_mode(mode)
+        return {"callouts": mode}
 
     def _command(self, action: str) -> str:
         """Carry out a fixed voice command (see COMMANDS) and return what to say."""
         if action in ("off", "critical", "all"):
             self.callouts.set_mode(action)
-            reply = {"off": "Callouts off.", "critical": "Critical callouts only.", "all": "Callouts on."}[action]
+            reply = t({"off": "callouts_off", "critical": "callouts_critical", "all": "callouts_on"}[action])
         elif action == "paste":
             reply = paste_clipboard()
         elif action in ("local", "cloud"):
             if not self.brain:
-                reply = "I have no brain to switch."
+                reply = t("no_brain")
             elif action == "cloud":
                 reply = self.brain.set_local(False)
             else:
                 reply = self.brain.set_local(True)
                 if self.brain.local_mode:
-                    reply = "Going local. Give me up to half a minute to load the model."
+                    reply = t("going_local")
                     threading.Thread(target=self._warm_local, daemon=True).start()
         elif action == "reset":
             if self.brain:
                 self.brain.reset()
-            reply = "Starting fresh."
+            reply = t("starting_fresh")
         else:
             budget = self.cfg["brain"]["daily_budget_usd"]
-            reply = f"About {spent_today() * 100:.0f} cents of today's {budget:.2f} dollar budget used."
+            reply = t("budget_used", cents=f"{spent_today() * 100:.0f}", budget=f"{budget:.2f}")
         self.say(reply)
         return reply
 
@@ -360,7 +410,7 @@ class Copilot:
             print("Push-to-talk: no button set. Run `vesper copilot --pick-button`, then add it to config.toml.", flush=True)
         else:
             self._setup_voice_input()
-        self.say("Co-pilot online.")
+        self.say(t("online"))
         self.reminders.startup()
         self.lookout.startup_summary()
         self.reminders.start_clock()

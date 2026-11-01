@@ -14,16 +14,15 @@ import time
 from datetime import datetime, timedelta, timezone
 from typing import Callable
 
+from .phrases import t
 from .speech import NORMAL
 
 log = logging.getLogger(__name__)
 
 SCOOPABLE = set("KGBFOAM")  # main-sequence stars a fuel scoop works on
-VALUABLE = {"Earthlike body": "an Earth-like world", "Water world": "a water world",
-            "Ammonia world": "an ammonia world"}
+VALUABLE = {"Earthlike body": "earthlike", "Water world": "water_world", "Ammonia world": "ammonia_world"}
 EXPIRY_WARNINGS = (3600, 900)  # seconds before a mission expires: an hour, then 15 minutes
 PATTERN_HOURS = 8              # "tonight", for counting repeat interdictions
-ORDINAL = {2: "second", 3: "third", 4: "fourth", 5: "fifth"}
 
 
 def _parse(ts: str | None) -> datetime | None:
@@ -38,8 +37,8 @@ def _spoken_time(seconds: float) -> str:
     """Seconds as speech: "a minute", "12 minutes", "about an hour"."""
     minutes = round(seconds / 60)
     if minutes >= 55:
-        return "about an hour"
-    return f"{minutes} minutes" if minutes > 1 else "a minute"
+        return t("about_an_hour")
+    return t("minutes", n=minutes) if minutes > 1 else t("a_minute")
 
 
 class Lookout:
@@ -100,8 +99,8 @@ class Lookout:
             if not due:
                 continue
             self.warned.update((m.get("id"), t) for t in EXPIRY_WARNINGS if t >= left)  # one warning, not two
-            where = f" in {m['destination_system']}" if m.get("destination_system") else ""
-            text = f"Heads up: {m.get('name') or 'a mission'}{where} expires in {_spoken_time(left)}."
+            where = t("in_system", system=m["destination_system"]) if m.get("destination_system") else ""
+            text = t("mission_expiring", mission=m.get("name") or t("a_mission"), where=where, time=_spoken_time(left))
             said.append(text)
             self._speak(text)
         return said
@@ -120,11 +119,11 @@ class Lookout:
             return
         self.warned.add(("scan", body))
         short = body.removeprefix(e.get("StarSystem", "")).strip() or body
-        what = kind or f"a terraformable {str(e.get('PlanetClass', 'planet')).lower()}"
+        what = t(kind) if kind else t("terraformable_planet", planet=str(e.get("PlanetClass", "planet")).lower())
         if kind and terraformable:
-            what += ", terraformable"
-        first = ", and nobody's discovered it yet" if e.get("WasDiscovered") is False else ""
-        self._speak(f"Valuable scan: {short} is {what}{first}. Worth mapping.")
+            what += t("and_terraformable")
+        first = t("undiscovered") if e.get("WasDiscovered") is False else ""
+        self._speak(t("valuable_scan", body=short, what=what, first=first))
 
     # ---- fuel along a plotted route ----
 
@@ -143,13 +142,13 @@ class Lookout:
         here = ev.data.get("StarSystem")
         star = next((r.get("StarClass") for r in s.route if r.get("StarSystem") == here), None)
         if star and star[0] in SCOOPABLE:
-            self._speak(f"Fuel at {pct} percent. This star is scoopable.")
+            self._speak(t("fuel_scoopable_here", pct=pct))
             return
         ahead = next((i + 1 for i, r in enumerate(remaining) if (r.get("StarClass") or " ")[0] in SCOOPABLE), None)
         if ahead is None:
-            self._speak(f"Fuel at {pct} percent, and there's no scoopable star left on this route.")
+            self._speak(t("fuel_no_scoopable", pct=pct))
         else:
-            self._speak(f"Fuel at {pct} percent. Next scoopable star is {ahead} jump{'s' if ahead > 1 else ''} out.")
+            self._speak(t("fuel_scoopable_ahead", pct=pct, n=ahead))
 
     # ---- arriving: a material trader and their shopping list ----
 
@@ -173,8 +172,7 @@ class Lookout:
         held = self.watcher.state.materials
         wanted = [n for n in items if not kind or material_kind(n, held)[0] in (kind, None)]
         if wanted:
-            label = f"{kind} material trader" if kind else "material trader"
-            self._speak(f"There's a {label} here. On your list: {', '.join(wanted)}.")
+            self._speak(t("trader_here", trader=t(f"trader_{kind or 'any'}"), items=", ".join(wanted)))
 
     def startup_summary(self, now: datetime | None = None) -> str | None:
         """At start-up: missions that expire within three hours, soonest first."""
@@ -190,12 +188,13 @@ class Lookout:
                 continue
             left = (expiry - now).total_seconds()
             if 0 < left <= 3 * 3600:
-                soon.append((left, m.get("name") or "a mission"))
+                soon.append((left, m.get("name") or t("a_mission")))
         if not soon:
             return None
         soon.sort()
-        parts = [f"{name}, {_spoken_time(left) if left < 3600 else f'{left / 3600:.1f} hours'}" for left, name in soon[:4]]
-        text = f"{len(soon)} mission{'s' if len(soon) > 1 else ''} expire within three hours: " + "; ".join(parts) + "."
+        parts = [f"{name}, {_spoken_time(left) if left < 3600 else t('hours', n=f'{left / 3600:.1f}')}"
+                 for left, name in soon[:4]]
+        text = t("missions_expiring", n=len(soon), list="; ".join(parts))
         self._speak(text)
         return text
 
@@ -213,13 +212,13 @@ class Lookout:
         if self.checklist["limpets"] and "refinery" in items and "dronecontrol" in items:
             limpets = s.cargo.get("Limpet", 0)
             if limpets == 0:
-                said.append("You have no limpets aboard. Did you mean to buy some?")
+                said.append(t("no_limpets"))
             elif limpets < 20:
-                said.append(f"Only {limpets} limpets aboard. Enough for this run?")
+                said.append(t("few_limpets", n=limpets))
         day = (ev.data.get("timestamp") or "")[:10]
         if self.checklist["fighter_crew"] and "fighterbay" in items and ("crew", day) not in self.warned:
             self.warned.add(("crew", day))
-            said.append("Fighter hangar fitted. Is your fighter pilot aboard?")
+            said.append(t("fighter_pilot"))
         if said:
             self._speak(" ".join(said))
 
@@ -237,9 +236,11 @@ class Lookout:
         if len(recent) < 2:
             return
         who, faction = ev.data.get("Interdictor_Localised") or ev.data.get("Interdictor"), ev.data.get("Faction")
-        parts = [f"That's the {ORDINAL.get(len(recent), str(len(recent)) + 'th')} interdiction tonight"]
+        n = len(recent)
+        ordinal = t(f"ordinal_{n}") if 2 <= n <= 5 else t("ordinal_n", n=n)
+        parts = [t("interdictions_tonight", ordinal=ordinal, n=n)]
         if who and sum(1 for i in recent if i.get("by") == who) > 1:
-            parts.append(f"{who} again")
+            parts.append(t("same_pilot", pilot=who))
         elif faction and sum(1 for i in recent if i.get("faction") == faction) > 1:
-            parts.append(f"same faction, {faction}")
+            parts.append(t("same_faction", faction=faction))
         self._speak(", ".join(parts) + ".")
