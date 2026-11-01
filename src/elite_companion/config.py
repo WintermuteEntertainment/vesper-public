@@ -97,6 +97,22 @@ def _merge(base: dict, override: dict) -> dict:
     return out
 
 
+def add_section(section: str, lines: str, path: Path | None = None) -> bool:
+    """Append a [section] with these lines to config.toml, creating the file if needed.
+
+    Never changes what's already there: if the file already has that section, nothing is written and
+    the result is False, so the caller can tell the user to edit it by hand.
+    """
+    path = path or CONFIG_PATH
+    old = path.read_text(encoding="utf-8") if path.exists() else ""
+    if any(line.strip() == f"[{section}]" for line in old.splitlines()):
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    gap = "" if not old else "\n" if old.endswith("\n") else "\n\n"
+    path.write_text(f"{old}{gap}[{section}]\n{lines}\n", encoding="utf-8")
+    return True
+
+
 def load(path: Path | None = None) -> dict:
     """The settings: DEFAULTS merged with config.toml if it exists. Always returns every section and key."""
     path = path or CONFIG_PATH

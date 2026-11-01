@@ -403,7 +403,8 @@ def _close(a: str, b: str) -> bool:
 
 def pick_button_interactive() -> int:
     """`vesper copilot --pick-button`: press keys, mouse buttons or joystick buttons; each one shows whether Elite
-    already uses it. Prints the [ptt] lines for the last free one, ready to paste into config.toml."""
+    already uses it. Then offers to save the last free one to config.toml (only if the file has no [ptt]
+    section yet; otherwise it prints the lines to paste)."""
     from .bindings import joystick_button_used, key_used
     from .ptt import pick_input
     print("Press the key, mouse button or joystick button you want for push-to-talk.\n"
@@ -422,8 +423,16 @@ def pick_button_interactive() -> int:
         else:
             print(f"  {label}: FREE", flush=True)
             last_free = lines
-    if last_free:
-        print(f"\nUse the free one by adding this to {config_mod.CONFIG_PATH}:\n\n[ptt]\n{last_free}\n")
+    if not last_free:
+        print("\nNo free button was pressed. Run this again and try another.")
+        return 0
+    path = config_mod.CONFIG_PATH
+    print(f"\nPush-to-talk:\n\n[ptt]\n{last_free}\n")
+    if input(f"Save this to {path}? [Y/n] ").strip().lower() in ("", "y", "yes"):
+        if config_mod.add_section("ptt", last_free):
+            print("Saved. Start Vesper with: vesper copilot")
+        else:
+            print(f"{path} already has a [ptt] section, so I left it alone. Replace its lines with the ones above.")
     return 0
 
 
