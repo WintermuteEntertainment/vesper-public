@@ -19,13 +19,35 @@ STALE_AFTER_S = 8.0     # ordinary lines older than this are skipped
 SVSF_ASYNC, SVSF_PURGE = 1, 2
 
 
-def _pick_token(tokens, wanted: str):
-    """The first SAPI voice or audio output whose name contains `wanted`, or None (the default)."""
+ONECORE_VOICES = r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech_OneCore\Voices"
+
+
+def _tokens(collection) -> list:
+    """A SAPI token collection as a list."""
+    return [collection.Item(i) for i in range(collection.Count)]
+
+
+def _all_voices(v) -> list:
+    """Every voice SAPI can use: its own desktop voices, then the newer ones Windows installs from
+    Settings > Time & language > Speech (including other languages). SAPI doesn't list those by
+    default, but they work once found."""
+    import win32com.client
+    voices = _tokens(v.GetVoices())
+    try:
+        cat = win32com.client.Dispatch("SAPI.SpObjectTokenCategory")
+        cat.SetId(ONECORE_VOICES, False)
+        voices += _tokens(cat.EnumerateTokens())
+    except Exception:  # an older Windows without them: the desktop voices still work
+        log.debug("no OneCore voices", exc_info=True)
+    return voices
+
+
+def _pick_token(tokens: list, wanted: str):
+    """The first voice or audio output whose name contains `wanted`, or None (the default)."""
     wanted = (wanted or "").lower()
     if not wanted:
         return None
-    for i in range(tokens.Count):
-        tok = tokens.Item(i)
+    for tok in tokens:
         if wanted in tok.GetDescription().lower():
             return tok
     log.warning("no voice/device matching %r", wanted)
@@ -33,11 +55,11 @@ def _pick_token(tokens, wanted: str):
 
 
 def list_voices_and_outputs() -> tuple[list[str], list[str]]:
-    """Installed SAPI voices and audio outputs, for `vesper copilot --voices`."""
+    """Installed voices and audio outputs, for `vesper copilot --voices`."""
     import win32com.client
     v = win32com.client.Dispatch("SAPI.SpVoice")
-    voices = [v.GetVoices().Item(i).GetDescription() for i in range(v.GetVoices().Count)]
-    outputs = [v.GetAudioOutputs().Item(i).GetDescription() for i in range(v.GetAudioOutputs().Count)]
+    voices = [t.GetDescription() for t in _all_voices(v)]
+    outputs = [t.GetDescription() for t in _tokens(v.GetAudioOutputs())]
     return voices, outputs
 
 
@@ -87,9 +109,9 @@ class Speaker:
         import win32com.client
         v = win32com.client.Dispatch("SAPI.SpVoice")
         name, rate, volume, device = self.settings
-        if tok := _pick_token(v.GetVoices(), name):
+        if tok := _pick_token(_all_voices(v), name):
             v.Voice = tok
-        if tok := _pick_token(v.GetAudioOutputs(), device):
+        if tok := _pick_token(_tokens(v.GetAudioOutputs()), device):
             v.AudioOutput = tok
         v.Rate, v.Volume = rate, volume
         return v
@@ -133,7 +155,7 @@ def speak_to_wav(text: str, path: str, voice: str = "") -> None:
     """Render speech to a WAV file (used to test speech recognition offline)."""
     import win32com.client
     v = win32com.client.Dispatch("SAPI.SpVoice")
-    if tok := _pick_token(v.GetVoices(), voice):
+    if tok := _pick_token(_all_voices(v), voice):
         v.Voice = tok
     stream = win32com.client.Dispatch("SAPI.SpFileStream")
     fmt = win32com.client.Dispatch("SAPI.SpAudioFormat")

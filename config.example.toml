@@ -18,9 +18,15 @@ rate = 1              # -10 slow .. 10 fast
 volume = 100          # 0 .. 100
 output_device = ""    # part of an output name, e.g. "Headphones"; blank = Windows default
 
+[language]
+code = "en"                 # the language you speak and Vesper answers in: en, fr, de, es, ru, pt, it, nl, pl...
+                            # Any language Whisper knows works. With [voice] voice blank she picks a Windows
+                            # voice for it (add one in Settings > Time & language > Speech). Callouts and the
+                            # short fixed commands are still English.
+
 [listen]
 mic = ""                    # part of the microphone name; blank = Windows default
-whisper_model = "base.en"   # tiny.en is faster, small.en more accurate
+whisper_model = "base.en"   # tiny.en is faster, small.en more accurate (other languages drop the .en)
 whisper_device = "cpu"      # "cuda" is faster on NVIDIA cards but shares the GPU with the game
 
 [brain]

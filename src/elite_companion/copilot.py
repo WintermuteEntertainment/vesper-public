@@ -19,6 +19,7 @@ import winsound
 from datetime import datetime
 from pathlib import Path
 
+from . import language
 from . import config as config_mod
 from .lookout import Lookout
 from .screen import SCREEN_SPEC
@@ -63,6 +64,13 @@ def paste_clipboard() -> str:
     if sent != len(keys):
         return "Windows blocked the paste. Press Control V yourself."
     return f"Pasted into {window.value or 'the active window'}."
+
+
+def _language_voice(cfg: dict) -> str:
+    """With [voice] voice blank: the language's name, so the first Windows voice for it is chosen
+    ("French" matches "Microsoft Hortense Desktop - French"). Blank for English: the Windows default."""
+    lang = language.code(cfg)
+    return "" if lang == "en" else language.name(lang)
 
 
 def _look_at_screen(whole_screen: bool = False) -> dict:
@@ -149,7 +157,7 @@ class Copilot:
         self.tools = GameTools(self.watcher, self.notes)
         self.log_dir = log_dir
         v = self.cfg["voice"]
-        self.speaker = Speaker(v["voice"], v["rate"], v["volume"], v["output_device"]) if speak else None
+        self.speaker = Speaker(v["voice"] or _language_voice(self.cfg), v["rate"], v["volume"], v["output_device"]) if speak else None
         self.callouts = Callouts(self.watcher, self.say, self.cfg["callouts"])
         self.reminders = Reminders(self.watcher, self.notes, self.say)
         self.lookout = Lookout(self.watcher, self.say, self.callouts, self.cfg["lookout"])
@@ -168,7 +176,8 @@ class Copilot:
                                          "look_at_screen": (SCREEN_SPEC, _look_at_screen),
                                          "read_contacts": (CONTACTS_SPEC, self._read_contacts)},
                             hard_model=b["hard_model"], hard_effort=b["hard_effort"], local=self.cfg["local"],
-                            web_search=b["web_search"], search=self.cfg["search"])
+                            web_search=b["web_search"], search=self.cfg["search"],
+                            language=language.code(self.cfg))
                       if has_credentials() or self.cfg["local"]["start_local"] else None)
         self.recorder = self.transcriber = self.ptt = None
         self._busy = threading.Lock()
@@ -303,7 +312,8 @@ class Copilot:
         p, l = self.cfg["ptt"], self.cfg["listen"]
         self.recorder = Recorder(l["mic"])
         print("Loading speech recognition...", flush=True)
-        self.transcriber = Transcriber(l["whisper_model"], l["whisper_device"])
+        lang = language.code(self.cfg)
+        self.transcriber = Transcriber(language.whisper_model(l["whisper_model"], lang), l["whisper_device"], lang)
         if p.get("key"):
             self.ptt = KeyPushToTalk(p["key"], self._on_press, self._on_release)
             print(f"Push-to-talk: {p['key']}", flush=True)
@@ -459,7 +469,7 @@ def main(argv: list[str]) -> int:
         return 0
     if args.say:
         v = cfg["voice"]
-        s = Speaker(v["voice"], v["rate"], v["volume"], v["output_device"])
+        s = Speaker(v["voice"] or _language_voice(cfg), v["rate"], v["volume"], v["output_device"])
         s.say(args.say, CRITICAL)
         s.wait_idle()
         return 0

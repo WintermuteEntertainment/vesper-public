@@ -109,6 +109,26 @@ it does. Common ones:
 
 Restart Vesper after changing settings.
 
+## Other languages
+
+Vesper can hear you and answer in other languages. Add this to `config.toml`, with your language's
+two-letter code (fr, de, es, ru, pt, it, nl, pl...):
+
+```toml
+[language]
+code = "fr"
+```
+
+- **Hearing:** the speech recognition model switches to its multilingual version. It's the same size
+  (141 MB), downloaded once on the next start.
+- **Answers:** Claude answers in your language. Game names stay as the game spells them.
+- **Voice:** with `[voice] voice` left blank, Vesper picks the first Windows voice for your language. Add one
+  in Windows Settings > Time & language > Speech > Add voices, then check it shows up with
+  `.venv\Scriptsesper copilot --voices`.
+
+Still English for now: the spoken callouts ("Shields down") and the short fixed commands ("quiet",
+"callouts on").
+
 ## Second screen
 
 While Vesper runs, a live status page is at http://localhost:8770. To open it on a tablet or phone on your

@@ -19,6 +19,7 @@ from pathlib import Path
 
 import anthropic
 
+from .language import answer_rule
 from .config import HOME
 from .memory import describe_note
 from .tools import TOOL_SPECS, GameDataError, GameTools, call_tool
@@ -253,8 +254,10 @@ class Brain:
                  daily_budget_usd: float = 1.0, max_history_turns: int = 40, client=None,
                  usage_log: Path = USAGE_LOG, idle_reset_minutes: float = 15, on_slow_tool=None,
                  extra_tools: dict | None = None, hard_model: str = "", hard_effort: str = "medium",
-                 local: dict | None = None, web_search: str | bool = "off", search: dict | None = None):
+                 local: dict | None = None, web_search: str | bool = "off", search: dict | None = None,
+                 language: str = "en"):
         self.tools, self.model, self.effort = tools, model, effort
+        self.language = language
         self.hard_model, self.hard_effort = hard_model, hard_effort
         # "anthropic": the API's paid server-side search. "searxng": free search on your own SearXNG, as
         # ordinary tools (so local mode can search too). Old configs said True/False.
@@ -349,7 +352,8 @@ class Brain:
         except Exception:  # no journal yet: the prompt works without the name
             cmdr = None
         return ((f"Your name is {name}; answer to it and use it when asked who you are.\n" if name else "")
-                + (f"The commander is CMDR {cmdr}.\n" if cmdr else "") + ("\n" if name or cmdr else "") + SYSTEM)
+                + (f"The commander is CMDR {cmdr}.\n" if cmdr else "") + answer_rule(self.language)
+                + ("\n" if name or cmdr or self.language != "en" else "") + SYSTEM)
 
     def _tool_specs(self, model: str) -> list[dict]:
         """Every tool this model may call: game tools, copilot extras, the server web search when
