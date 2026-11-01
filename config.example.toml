@@ -1,0 +1,81 @@
+# Vesper settings. Copy to %USERPROFILE%\.vesper\config.toml and edit.
+# Everything is optional: anything left out uses the default shown here, so your own file only
+# needs the lines you change. (A test keeps this file in step with the defaults in config.py.)
+
+[ptt]                 # push-to-talk: hold it, speak, let go. Find yours with:
+                      #   python -m elite_companion copilot --pick-button
+                      # Press candidates; it says which ones Elite already uses and prints the lines to paste here.
+key = ""              # a keyboard key or mouse button: "F9", "Right Ctrl", "Mouse 4", "Numpad 0"...
+device = ""           # ...or a joystick, by the name the picker shows (e.g. "T16000M") or its USB id
+button = 0            # ...and its button number. No key and button 0 = push-to-talk off (callouts still work)
+
+[controls]
+nicknames = {}        # what you call your devices, for "what does this button do": { T16000M = "right stick" }
+
+[voice]
+voice = ""            # list yours: vesper copilot --voices. Part of a Windows voice name: "Hazel" (British) or "Zira" (American); blank = default
+rate = 1              # -10 slow .. 10 fast
+volume = 100          # 0 .. 100
+output_device = ""    # part of an output name, e.g. "Headphones"; blank = Windows default
+
+[listen]
+mic = ""                    # part of the microphone name; blank = Windows default
+whisper_model = "base.en"   # tiny.en is faster, small.en more accurate
+whisper_device = "cpu"      # "cuda" is faster on NVIDIA cards but shares the GPU with the game
+
+[brain]
+model = "claude-haiku-5-5"  # everyday answers: quick and cheap (about a tenth of a cent a question)
+effort = "low"              # low keeps spoken answers quick and cheap
+daily_budget_usd = 1.00     # hard stop for the day once the estimated spend reaches this
+max_history_turns = 40      # questions remembered before the conversation starts fresh...
+idle_reset_minutes = 15     # ...or after this long without a question
+hard_model = "claude-sonnet-5-5"   # "think hard about..." questions go here; "" = never
+hard_effort = "medium"
+web_search = "anthropic"    # anthropic (about 1 cent a search) | searxng (free, your own server, see [search]) | off
+
+[search]                    # only for web_search = "searxng"
+searxng_url = ""            # your SearXNG, e.g. "http://localhost:8888" (its settings must allow format=json)
+ssh_host = ""               # optional "user@host": run the search there over SSH, if SearXNG only listens locally
+
+[local]                     # optional "go local": an OpenAI-compatible server instead of Claude
+base_url = ""               # Ollama "http://localhost:11434/v1", LM Studio "http://localhost:1234/v1"; blank = off
+model = ""                  # the model name that server expects, e.g. "qwen3:30b"
+timeout_seconds = 120
+start_local = false         # start in local mode
+
+[callouts]
+mode = "all"          # all | critical | off   (also by voice: "quiet", "critical only", "callouts on")
+
+# On by default: hostile_hail, interdiction, shields_down, hull, under_attack,
+#                low_fuel, overheating, objective_done, destination
+# Off by default: jumps_left, escaped, docking, first_discovery, crime, fuel_full
+# Override any of them like this:
+# [callouts.rules.under_attack]
+# enabled = false
+#
+# [callouts.rules.hostile_hail]
+# cooldown = 120      # seconds before the same pilot can trigger it again
+
+[lookout]                   # callouts that watch over time; set any to false to silence it
+mission_expiry = true       # an hour, then 15 minutes, before a mission expires
+valuable_scan = true        # Earth-like, water and ammonia worlds, and terraformables
+scoop_ahead = true          # under half a tank on a route: is this star scoopable, or how far to the next
+patterns = true             # "that's the third interdiction tonight"
+limpets = true              # leaving port in a mining ship with few or no limpets
+fighter_crew = true         # first undock of the day with a fighter hangar: is the pilot aboard?
+
+[mining]
+prospector = "full"         # full | verdict | good (only rocks worth mining) | off
+
+[screen]                    # "look at my screen" and "read my contacts" in VR, where Elite's window is minimised
+mirror_windows = ["Oculus Mirror", "Headset Window", "VR View"]   # title starts of VR mirror windows to capture
+mirror_command = ""         # optional: opens your mirror when none is showing, e.g. for Meta headsets:
+                            # 'C:\Program Files\Meta Horizon\Support\oculus-diagnostics\OculusMirror.exe'
+
+[dashboard]                 # live second-screen page: http://localhost:8770
+enabled = true
+host = "127.0.0.1"          # "0.0.0.0" lets a tablet or phone on your network open http://<this PC>:8770
+port = 8770
+
+[eddn]
+enabled = false             # upload the market screens you open to EDDN (the feed Spansh, Inara and EDSM use)

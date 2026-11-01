@@ -1,0 +1,10707 @@
+{
+"source": "Blueprints: EDEngineer (github.com/msarilar/EDEngineer, data of 2024-03). Bases: hand table (2026-10), coordinates from EDSM. Unlock requirements: Alioth Elite wiki (wiki.alioth.net/index.php/Elite_4/Engineers), community data that may be dated. Colonia engineers aren't covered.",
+"engineers": {
+"Felicity Farseer": {
+"system": "Deciat",
+"base": "Farseer Inc",
+"coords": [
+122.625,
+-0.8125,
+-47.28125
+],
+"colonia": false,
+"unlock": {
+"found_via": "public knowledge",
+"invitation": "reach exploration rank Scout",
+"unlock": "donate 1 Meta-Alloy"
+}
+},
+"Elvira Martuuk": {
+"system": "Khun",
+"base": "Long Sight Base",
+"coords": [
+-171.59375,
+19.96875,
+-56.96875
+],
+"colonia": false,
+"unlock": {
+"found_via": "public knowledge",
+"invitation": "travel 300 ly from your starting location",
+"unlock": "donate 3 Soontill Relics"
+}
+},
+"The Dweller": {
+"system": "Wyrd",
+"base": "Black Hide",
+"coords": [
+-11.625,
+31.53125,
+-3.9375
+],
+"colonia": false,
+"unlock": {
+"found_via": "public knowledge",
+"invitation": "deal with 5 black markets",
+"unlock": "donate 500,000 credits"
+}
+},
+"Liz Ryder": {
+"system": "Eurybia",
+"base": "Demolition Unlimited",
+"coords": [
+51.40625,
+-54.40625,
+-30.5
+],
+"colonia": false,
+"unlock": {
+"found_via": "public knowledge",
+"invitation": "be Friendly with Eurybia Blue Mafia",
+"unlock": "donate 200 landmines"
+}
+},
+"Tod McQuinn": {
+"system": "Wolf 397",
+"base": "Trophy Camp",
+"coords": [
+40,
+79.21875,
+-10.40625
+],
+"colonia": false,
+"unlock": {
+"found_via": "public knowledge",
+"invitation": "earn 15 bounty vouchers",
+"unlock": "hand in 100,000 credits of bounty vouchers"
+}
+},
+"Juri Ishmaak": {
+"system": "Giryak",
+"base": "Pater's Memorial",
+"coords": [
+14.6875,
+27.65625,
+108.65625
+],
+"colonia": false,
+"unlock": {
+"found_via": "Felicity Farseer",
+"invitation": "earn 50 combat bonds",
+"unlock": "hand in combat bonds (the wiki lists both 100,000 and 1,000,000 credits)"
+}
+},
+"Zacariah Nemo": {
+"system": "Yoru",
+"base": "Nemo Cyber Party Base",
+"coords": [
+97.875,
+-86.90625,
+64.125
+],
+"colonia": false,
+"unlock": {
+"found_via": "Elvira Martuuk",
+"invitation": "get an invitation from the Party of Yoru",
+"unlock": "donate 25 Xihe Companions"
+}
+},
+"Lei Cheung": {
+"system": "Laksak",
+"base": "Trader's Rest",
+"coords": [
+-21.53125,
+-6.3125,
+116.03125
+],
+"colonia": false,
+"unlock": {
+"found_via": "The Dweller",
+"invitation": "trade on 50 different markets",
+"unlock": "donate 200 Gold"
+}
+},
+"Selene Jean": {
+"system": "Kuk",
+"base": "Prospector's Rest",
+"coords": [
+-21.28125,
+69.09375,
+-16.3125
+],
+"colonia": false,
+"unlock": {
+"found_via": "Tod McQuinn",
+"invitation": "mine 500 tons of ore",
+"unlock": "donate 10 Painite"
+}
+},
+"Hera Tani": {
+"system": "Kuwemaki",
+"base": "The Jet's Hole",
+"coords": [
+134.65625,
+-226.90625,
+-7.8125
+],
+"colonia": false,
+"unlock": {
+"found_via": "Liz Ryder",
+"invitation": "reach Empire rank Outsider",
+"unlock": "donate 50 Kamitra Cigars"
+}
+},
+"Broo Tarquin": {
+"system": "Muang",
+"base": "Broo's Legacy",
+"coords": [
+17.03125,
+-172.78125,
+-3.46875
+],
+"colonia": false,
+"unlock": {
+"found_via": "Hera Tani",
+"invitation": "reach combat rank Competent",
+"unlock": "donate 50 Fujin Tea"
+}
+},
+"Marco Qwent": {
+"system": "Sirius",
+"base": "Qwent Research Base",
+"coords": [
+6.25,
+-1.28125,
+-5.75
+],
+"colonia": false,
+"unlock": {
+"found_via": "Elvira Martuuk",
+"invitation": "get an invitation from Sirius Corporation (Sirius needs a permit)",
+"unlock": "donate 25 Modular Terminals"
+}
+},
+"Ram Tah": {
+"system": "Meene",
+"base": "Phoenix Base",
+"coords": [
+118.78125,
+-56.4375,
+-97.1875
+],
+"colonia": false,
+"unlock": {
+"found_via": "Lei Cheung",
+"invitation": "reach exploration rank Surveyor",
+"unlock": "donate 50 Classified Scan Databanks"
+}
+},
+"Lori Jameson": {
+"system": "Shinrarta Dezhra",
+"base": "Jameson Base",
+"coords": [
+55.71875,
+17.59375,
+27.15625
+],
+"colonia": false,
+"unlock": {
+"found_via": "Marco Qwent",
+"invitation": "reach combat rank Dangerous (Shinrarta Dezhra needs a permit)",
+"unlock": "donate 25 Kongga Ale"
+}
+},
+"Tiana Fortune": {
+"system": "Achenar",
+"base": "Fortune's Loss",
+"coords": [
+67.5,
+-119.46875,
+24.84375
+],
+"colonia": false,
+"unlock": {
+"found_via": "Hera Tani",
+"invitation": "be Friendly with the Empire (Achenar needs a permit)",
+"unlock": "donate 50 Decoded Emission Data"
+}
+},
+"The Sarge": {
+"system": "Beta-3 Tucani",
+"base": "The Beach",
+"coords": [
+32.25,
+-55.1875,
+23.875
+],
+"colonia": false,
+"unlock": {
+"found_via": "Juri Ishmaak",
+"invitation": "reach Federal Navy rank Midshipman",
+"unlock": "donate 50 Aberrant Shield Pattern Analysis"
+}
+},
+"Didi Vatermann": {
+"system": "Leesti",
+"base": "Vatermann LLC",
+"coords": [
+72.75,
+48.75,
+68.25
+],
+"colonia": false,
+"unlock": {
+"found_via": "Selene Jean",
+"invitation": "reach trade rank Merchant",
+"unlock": "donate 50 Lavian Brandy"
+}
+},
+"Bill Turner": {
+"system": "Alioth",
+"base": "Turner Metallics Inc",
+"coords": [
+-33.65625,
+72.46875,
+-20.65625
+],
+"colonia": false,
+"unlock": {
+"found_via": "Selene Jean",
+"invitation": "be Friendly with the Alliance (Alioth needs a permit)",
+"unlock": "donate 50 Bromellite"
+}
+},
+"Colonel Bris Dekker": {
+"system": "Sol",
+"base": "Dekker's Yard",
+"coords": [
+0,
+0,
+0
+],
+"colonia": false,
+"unlock": {
+"found_via": "Juri Ishmaak",
+"invitation": "be Friendly with the Federation (Sol needs a permit)",
+"unlock": "hand in combat bonds (the wiki lists both 1,000,000 and 10,000,000 credits)"
+}
+},
+"Professor Palin": {
+"system": "Arque",
+"base": "Abel Laboratory",
+"coords": [
+66.5,
+38.0625,
+61.125
+],
+"colonia": false,
+"unlock": {
+"found_via": "Marco Qwent",
+"invitation": "travel 5,000 ly from your starting location",
+"unlock": "donate 25 Unknown Fragments (he has since moved to Arque; check in game)"
+}
+},
+"Etienne Dorn": {
+"system": "Los",
+"base": "Kraken's Retreat",
+"coords": [
+-9509.34375,
+-886.3125,
+19820.125
+],
+"colonia": true
+},
+"Marsha Hicks": {
+"system": "Tir",
+"base": "The Watchtower",
+"coords": [
+-9532.9375,
+-923.4375,
+19799.125
+],
+"colonia": true
+},
+"Mel Brandon": {
+"system": "Luchtaine",
+"base": "The Brig",
+"coords": [
+-9523.3125,
+-914.46875,
+19825.90625
+],
+"colonia": true
+},
+"Petra Olmanova": {
+"system": "Asura",
+"base": "Sanctuary",
+"coords": [
+-9550.28125,
+-916.65625,
+19816.1875
+],
+"colonia": true
+},
+"Chloe Sedesi": {
+"system": "Shenve",
+"base": "Cinder Dock",
+"coords": [
+351.96875,
+-373.46875,
+-711.09375
+],
+"colonia": true
+}
+},
+"modules": {
+"Plasma Accelerator": {
+"Short Range Blaster": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Focused Weapon": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Efficient Weapon": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Lightweight Mount": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn"
+]
+},
+"Dazzle Shell": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Dispersal Field": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Target Lock Breaker": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Thermal Conduit": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Phasing Sequence": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Plasma Slug": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Oversized": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Flow Control": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Double Braced": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Bill Turner",
+"Etienne Dorn",
+"Zacariah Nemo"
+]
+}
+},
+"Electronic Countermeasure": {
+"Lightweight": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Shielded": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Reinforced": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+}
+},
+"Life Support": {
+"Lightweight": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"4": [
+"Etienne Dorn",
+"Lori Jameson"
+],
+"5": [
+"Etienne Dorn"
+]
+},
+"Reinforced": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"4": [
+"Etienne Dorn",
+"Lori Jameson"
+],
+"5": [
+"Etienne Dorn",
+"Lori Jameson"
+]
+},
+"Shielded": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson"
+],
+"4": [
+"Etienne Dorn",
+"Lori Jameson"
+],
+"5": [
+"Etienne Dorn"
+]
+}
+},
+"Hull Reinforcement Package": {
+"Heavy Duty Hull Reinforcement": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Thermal Resistant Hull Reinforcement": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Kinetic Resistant Hull Reinforcement": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Blast Resistant Hull Reinforcement": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Lightweight Hull Reinforcement": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Angled Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Layered Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Reflective Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Deep Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+}
+},
+"Cannon": {
+"Short Range Blaster": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Efficient Weapon": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"High Capacity Magazine": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Lightweight Mount": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Marsha Hicks",
+"The Sarge"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge"
+]
+},
+"Auto Loader": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Dispersal Field": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Force Shell": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"High Yield Shell": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Smart Rounds": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Thermal Cascade": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Oversized": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Flow Control": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Double Braced": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Marsha Hicks",
+"The Sarge",
+"Tod McQuinn"
+]
+}
+},
+"Thrusters": {
+"Drive Strengthening": {
+"1": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"2": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"3": [
+"Chloe Sedesi",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"4": [
+"Chloe Sedesi",
+"Mel Brandon",
+"Professor Palin"
+],
+"5": [
+"Chloe Sedesi",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Dirty Drive Tuning": {
+"1": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"2": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"3": [
+"Chloe Sedesi",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"4": [
+"Chloe Sedesi",
+"Mel Brandon",
+"Professor Palin"
+],
+"5": [
+"Chloe Sedesi",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Clean Drive Tuning": {
+"1": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"2": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"3": [
+"Chloe Sedesi",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"4": [
+"Chloe Sedesi",
+"Mel Brandon",
+"Professor Palin"
+],
+"5": [
+"Chloe Sedesi",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Double Braced": {
+"experimental": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Drive Distributors": {
+"experimental": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Drag Drives": {
+"experimental": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Thermal Spread": {
+"experimental": [
+"Chloe Sedesi",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+}
+},
+"Multi-cannon": {
+"Efficient Weapon": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Short Range Blaster": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"High Capacity Magazine": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Lightweight Mount": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Tod McQuinn"
+],
+"5": [
+"Marsha Hicks",
+"Tod McQuinn"
+]
+},
+"Auto Loader": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Corrosive Shell": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Emissive Munitions": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Thermal Shock": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Incendiary Rounds": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Smart Rounds": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Flow Control": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Double Braced": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Oversized": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+}
+},
+"Missile Rack": {
+"Lightweight Mount": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Liz Ryder",
+"Petra Olmanova"
+],
+"5": [
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Liz Ryder",
+"Petra Olmanova"
+],
+"5": [
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"High Capacity Magazine": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Liz Ryder",
+"Petra Olmanova"
+],
+"5": [
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Liz Ryder",
+"Petra Olmanova"
+],
+"5": [
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Drag Munition (Seeker only)": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Emissive Munitions": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Overload Munitions": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Thermal Cascade": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Penetrator Munitions (Dumbfire only)": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"FSD Interrupt (Dumbfire only)": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Oversized": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Flow Control": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Double Braced": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+}
+},
+"Power Plant": {
+"Armoured": {
+"1": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"4": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"5": [
+"Etienne Dorn",
+"Hera Tani"
+]
+},
+"Low Emissions": {
+"1": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"4": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"5": [
+"Etienne Dorn",
+"Hera Tani"
+]
+},
+"Overcharged": {
+"1": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"4": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent"
+],
+"5": [
+"Etienne Dorn",
+"Hera Tani"
+]
+},
+"Thermal Spread": {
+"experimental": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+]
+},
+"Monstered": {
+"experimental": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+]
+},
+"Double Braced": {
+"experimental": [
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Marco Qwent"
+]
+}
+},
+"Chaff Launcher": {
+"Reinforced": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Ammo Capacity": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Shielded": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Lightweight": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+}
+},
+"Frame Shift Drive Interdictor": {
+"Long Range FSD Interdictor": {
+"1": [
+"Colonel Bris Dekker",
+"Felicity Farseer",
+"Mel Brandon",
+"Tiana Fortune"
+],
+"2": [
+"Colonel Bris Dekker",
+"Mel Brandon",
+"Tiana Fortune"
+],
+"3": [
+"Colonel Bris Dekker",
+"Mel Brandon",
+"Tiana Fortune"
+],
+"4": [
+"Colonel Bris Dekker",
+"Mel Brandon"
+],
+"5": [
+"Mel Brandon"
+]
+},
+"Expanded FSD Interdictor Capture Arc": {
+"1": [
+"Colonel Bris Dekker",
+"Felicity Farseer",
+"Mel Brandon",
+"Tiana Fortune"
+],
+"2": [
+"Colonel Bris Dekker",
+"Mel Brandon",
+"Tiana Fortune"
+],
+"3": [
+"Colonel Bris Dekker",
+"Mel Brandon",
+"Tiana Fortune"
+],
+"4": [
+"Colonel Bris Dekker",
+"Mel Brandon"
+],
+"5": [
+"Mel Brandon"
+]
+}
+},
+"Shield Generator": {
+"Reinforced Shields": {
+"1": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Lei Cheung",
+"Mel Brandon"
+],
+"5": [
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Enhanced, Low Power Shields": {
+"1": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Lei Cheung",
+"Mel Brandon"
+],
+"5": [
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Thermal Resistant Shields": {
+"1": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Lei Cheung",
+"Mel Brandon"
+],
+"5": [
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Kinetic Resistant Shields": {
+"1": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Lei Cheung",
+"Mel Brandon"
+],
+"5": [
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Hi-cap": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Multi-weave": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Thermo Block": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Fast Charge": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Double Braced": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Force Block": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Lo-draw": {
+"experimental": [
+"Didi Vatermann",
+"Elvira Martuuk",
+"Lei Cheung",
+"Mel Brandon"
+]
+}
+},
+"Point Defence": {
+"Reinforced": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Shielded": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Ammo Capacity": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Lightweight": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+}
+},
+"Shield Booster": {
+"Thermal Resistant": {
+"1": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Didi Vatermann",
+"Mel Brandon"
+],
+"5": [
+"Didi Vatermann",
+"Mel Brandon"
+]
+},
+"Kinetic Resistant": {
+"1": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Didi Vatermann",
+"Mel Brandon"
+],
+"5": [
+"Didi Vatermann",
+"Mel Brandon"
+]
+},
+"Heavy Duty": {
+"1": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Didi Vatermann",
+"Mel Brandon"
+],
+"5": [
+"Didi Vatermann",
+"Mel Brandon"
+]
+},
+"Resistance Augmented": {
+"1": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Didi Vatermann",
+"Mel Brandon"
+],
+"5": [
+"Didi Vatermann",
+"Mel Brandon"
+]
+},
+"Blast Resistant": {
+"1": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+],
+"2": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"3": [
+"Didi Vatermann",
+"Lei Cheung",
+"Mel Brandon"
+],
+"4": [
+"Didi Vatermann",
+"Mel Brandon"
+],
+"5": [
+"Didi Vatermann",
+"Mel Brandon"
+]
+},
+"Force Block": {
+"experimental": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Thermo Block": {
+"experimental": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Blast Block": {
+"experimental": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Flow Control": {
+"experimental": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Double Braced": {
+"experimental": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+]
+},
+"Super Capacitor": {
+"experimental": [
+"Didi Vatermann",
+"Felicity Farseer",
+"Lei Cheung",
+"Mel Brandon"
+]
+}
+},
+"Kill Warrant Scanner": {
+"Reinforced": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Lightweight": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Shielded": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Long Range Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Wide Angle Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Fast Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+}
+},
+"Rail Gun": {
+"Short Range Blaster": {
+"1": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"4": [
+"Etienne Dorn",
+"Tod McQuinn"
+],
+"5": [
+"Etienne Dorn",
+"Tod McQuinn"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"4": [
+"Etienne Dorn",
+"Tod McQuinn"
+],
+"5": [
+"Etienne Dorn",
+"Tod McQuinn"
+]
+},
+"Lightweight Mount": {
+"1": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"4": [
+"Etienne Dorn",
+"Tod McQuinn"
+],
+"5": [
+"Etienne Dorn",
+"Tod McQuinn"
+]
+},
+"High Capacity Magazine": {
+"1": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"4": [
+"Etienne Dorn",
+"Tod McQuinn"
+],
+"5": [
+"Etienne Dorn",
+"Tod McQuinn"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"2": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"3": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+],
+"4": [
+"Etienne Dorn",
+"Tod McQuinn"
+],
+"5": [
+"Etienne Dorn",
+"Tod McQuinn"
+]
+},
+"Feedback Cascade": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Plasma Slug": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Super Penetrator": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Oversized": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Flow Control": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Double Braced": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Etienne Dorn",
+"The Sarge",
+"Tod McQuinn"
+]
+}
+},
+"Power Distributor": {
+"Weapon Focused": {
+"1": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"4": [
+"Etienne Dorn",
+"The Dweller"
+],
+"5": [
+"Etienne Dorn",
+"The Dweller"
+]
+},
+"System Focused": {
+"1": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"4": [
+"Etienne Dorn",
+"The Dweller"
+],
+"5": [
+"Etienne Dorn",
+"The Dweller"
+]
+},
+"Engine Focused": {
+"1": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"4": [
+"Etienne Dorn",
+"The Dweller"
+],
+"5": [
+"Etienne Dorn",
+"The Dweller"
+]
+},
+"High Charge Capacity": {
+"1": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"4": [
+"Etienne Dorn",
+"The Dweller"
+],
+"5": [
+"Etienne Dorn",
+"The Dweller"
+]
+},
+"Charge Enhanced": {
+"1": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"4": [
+"Etienne Dorn",
+"The Dweller"
+],
+"5": [
+"Etienne Dorn",
+"The Dweller"
+]
+},
+"Shielded": {
+"1": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"2": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"3": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+],
+"4": [
+"Etienne Dorn",
+"The Dweller"
+],
+"5": [
+"Etienne Dorn",
+"The Dweller"
+]
+},
+"Flow Control": {
+"experimental": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+]
+},
+"Super Conduits": {
+"experimental": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+]
+},
+"Cluster Capacitor": {
+"experimental": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+]
+},
+"Double Braced": {
+"experimental": [
+"Etienne Dorn",
+"Hera Tani",
+"Marco Qwent",
+"The Dweller"
+]
+}
+},
+"Fragment Cannon": {
+"Lightweight Mount": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"High Capacity Magazine": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"Efficient Weapon": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"Double Shot": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"2": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"3": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+],
+"4": [
+"Marsha Hicks",
+"Zacariah Nemo"
+],
+"5": [
+"Marsha Hicks",
+"Zacariah Nemo"
+]
+},
+"Corrosive Shell": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Dazzle Shell": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Drag Munition": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Incendiary Rounds": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Screening Shell": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Oversized": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Double Braced": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Flow Control": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Marsha Hicks",
+"Tod McQuinn",
+"Zacariah Nemo"
+]
+}
+},
+"Mine Launcher": {
+"Lightweight Mount": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Juri Ishmaak",
+"Petra Olmanova"
+],
+"5": [
+"Juri Ishmaak",
+"Petra Olmanova"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Juri Ishmaak",
+"Petra Olmanova"
+],
+"5": [
+"Juri Ishmaak",
+"Petra Olmanova"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Juri Ishmaak",
+"Petra Olmanova"
+],
+"5": [
+"Juri Ishmaak",
+"Petra Olmanova"
+]
+},
+"High Capacity Magazine": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Juri Ishmaak",
+"Petra Olmanova"
+],
+"5": [
+"Juri Ishmaak",
+"Petra Olmanova"
+]
+},
+"Ion Disruptor": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Overload Munitions": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Radiant Canister": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Reverberating Cascade": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Shift-Lock Canister": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Emissive Munitions": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Flow Control": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Oversized": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Double Braced": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+}
+},
+"Beam Laser": {
+"Lightweight Mount": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Short Range Blaster": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Efficient Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Concordant Sequence": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Regeneration Sequence": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Thermal Conduit": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Thermal Shock": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Thermal Vent": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Oversized": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Double Braced": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Flow Control": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+}
+},
+"Armour": {
+"Blast Resistant": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Lightweight": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Kinetic Resistant": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Heavy Duty": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Thermal Resistant": {
+"1": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+],
+"2": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"3": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"4": [
+"Petra Olmanova",
+"Selene Jean"
+],
+"5": [
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Angled Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Layered Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Reflective Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+},
+"Deep Plating": {
+"experimental": [
+"Liz Ryder",
+"Petra Olmanova",
+"Selene Jean"
+]
+}
+},
+"Prospector Limpet Controller": {
+"Reinforced": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Shielded": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Lightweight": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+}
+},
+"Manifest Scanner": {
+"Shielded": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Reinforced": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Lightweight": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Long Range Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Wide Angle Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Fast Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+}
+},
+"Burst Laser": {
+"Lightweight Mount": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Focused Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Efficient Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Short Range Blaster": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Concordant Sequence": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Inertial Impact": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Phasing Sequence": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Scramble Spectrum": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Thermal Shock": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Oversized": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Double Braced": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Flow Control": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+}
+},
+"Heat Sink Launcher": {
+"Reinforced": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Ammo Capacity": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Shielded": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+},
+"Lightweight": {
+"1": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"2": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"3": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"4": [
+"Petra Olmanova",
+"Ram Tah"
+],
+"5": [
+"Petra Olmanova",
+"Ram Tah"
+]
+}
+},
+"Wake Scanner": {
+"Shielded": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Lightweight": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Reinforced": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Long Range Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Wide Angle Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+},
+"Fast Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Etienne Dorn",
+"Tiana Fortune"
+],
+"5": [
+"Etienne Dorn",
+"Tiana Fortune"
+]
+}
+},
+"Pulse Laser": {
+"Focused Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Long Range Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Rapid Fire Modification": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Overcharged Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Efficient Weapon": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Lightweight Mount": {
+"1": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"2": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"3": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"4": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+],
+"5": [
+"Broo Tarquin",
+"Mel Brandon"
+]
+},
+"Concordant Sequence": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Emissive Munitions": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Phasing Sequence": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Scramble Spectrum": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Thermal Shock": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Oversized": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Flow Control": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Double Braced": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+},
+"Multi-Servos": {
+"experimental": [
+"Broo Tarquin",
+"Mel Brandon",
+"The Dweller"
+]
+}
+},
+"Refinery": {
+"Shielded": {
+"1": [
+"Bill Turner",
+"Lori Jameson",
+"Marsha Hicks"
+],
+"2": [
+"Bill Turner",
+"Lori Jameson",
+"Marsha Hicks"
+],
+"3": [
+"Bill Turner",
+"Lori Jameson",
+"Marsha Hicks"
+],
+"4": [
+"Lori Jameson",
+"Marsha Hicks"
+],
+"5": [
+"Marsha Hicks"
+]
+}
+},
+"Auto Field-Maintenance Unit": {
+"Shielded": {
+"1": [
+"Bill Turner",
+"Lori Jameson",
+"Petra Olmanova"
+],
+"2": [
+"Bill Turner",
+"Lori Jameson",
+"Petra Olmanova"
+],
+"3": [
+"Bill Turner",
+"Lori Jameson",
+"Petra Olmanova"
+],
+"4": [
+"Lori Jameson",
+"Petra Olmanova"
+],
+"5": [
+"Petra Olmanova"
+]
+}
+},
+"Fuel Transfer Limpet Controller": {
+"Reinforced": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Lightweight": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Shielded": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+}
+},
+"Frame Shift Drive": {
+"Increased FSD Range": {
+"1": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"2": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"3": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"4": [
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon"
+],
+"5": [
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon"
+]
+},
+"Faster FSD Boot Sequence": {
+"1": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"2": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"3": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"4": [
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon"
+],
+"5": [
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon"
+]
+},
+"Shielded FSD": {
+"1": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"2": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"3": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+],
+"4": [
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon"
+],
+"5": [
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon"
+]
+},
+"Deep Charge": {
+"experimental": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Double Braced": {
+"experimental": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Mass Manager": {
+"experimental": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+},
+"Thermal Spread": {
+"experimental": [
+"Chloe Sedesi",
+"Colonel Bris Dekker",
+"Elvira Martuuk",
+"Felicity Farseer",
+"Mel Brandon",
+"Professor Palin"
+]
+}
+},
+"Hatch Breaker Limpet Controller": {
+"Lightweight": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Reinforced": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Shielded": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+}
+},
+"Fuel Scoop": {
+"Shielded": {
+"1": [
+"Bill Turner",
+"Lori Jameson",
+"Marsha Hicks"
+],
+"2": [
+"Bill Turner",
+"Lori Jameson",
+"Marsha Hicks"
+],
+"3": [
+"Bill Turner",
+"Lori Jameson",
+"Marsha Hicks"
+],
+"4": [
+"Lori Jameson",
+"Marsha Hicks"
+],
+"5": [
+"Marsha Hicks"
+]
+}
+},
+"Torpedo Pylon": {
+"Lightweight Mount": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Liz Ryder",
+"Petra Olmanova"
+],
+"5": [
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Sturdy Mount": {
+"1": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"2": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"3": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+],
+"4": [
+"Liz Ryder",
+"Petra Olmanova"
+],
+"5": [
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Mass Lock Munition": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Penetrator Payload": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Reverberating Cascade": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Flow Control": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Oversized": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+},
+"Double Braced": {
+"experimental": [
+"Juri Ishmaak",
+"Liz Ryder",
+"Petra Olmanova"
+]
+}
+},
+"Collector Limpet Controller": {
+"Reinforced": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Shielded": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+},
+"Lightweight": {
+"1": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"2": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"3": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"4": [
+"Marsha Hicks",
+"Ram Tah",
+"The Sarge",
+"Tiana Fortune"
+],
+"5": [
+"Marsha Hicks",
+"The Sarge",
+"Tiana Fortune"
+]
+}
+},
+"Shield Cell Bank": {
+"Rapid Charge": {
+"1": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+],
+"2": [
+"Lori Jameson",
+"Mel Brandon"
+],
+"3": [
+"Lori Jameson",
+"Mel Brandon"
+],
+"4": [
+"Mel Brandon"
+]
+},
+"Specialised": {
+"1": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+],
+"2": [
+"Lori Jameson",
+"Mel Brandon"
+],
+"3": [
+"Lori Jameson",
+"Mel Brandon"
+],
+"4": [
+"Mel Brandon"
+]
+},
+"Double Braced": {
+"experimental": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+]
+},
+"Flow Control": {
+"experimental": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+]
+},
+"Stripped Down": {
+"experimental": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+]
+},
+"Boss Cells": {
+"experimental": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+]
+},
+"Recycling Cells": {
+"experimental": [
+"Elvira Martuuk",
+"Lori Jameson",
+"Mel Brandon"
+]
+}
+},
+"Sensors": {
+"Long Range Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+]
+},
+"Wide Angle Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+]
+},
+"Light Weight Scanner": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+]
+}
+},
+"Surface Scanner": {
+"Expanded Probe Scanning Radius": {
+"1": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"2": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"3": [
+"Bill Turner",
+"Etienne Dorn",
+"Felicity Farseer",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson",
+"Tiana Fortune"
+],
+"4": [
+"Bill Turner",
+"Etienne Dorn",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson"
+],
+"5": [
+"Bill Turner",
+"Etienne Dorn",
+"Hera Tani",
+"Juri Ishmaak",
+"Lei Cheung",
+"Lori Jameson"
+]
+}
+}
+},
+"ingredients": {
+"Plasma Accelerator": {
+"Short Range Blaster": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"3": {
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Configurable Components": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Focused Weapon": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Conductive Components": 1,
+"Iron": 1
+},
+"3": {
+"Chromium": 1,
+"Conductive Ceramics": 1,
+"Iron": 1
+},
+"4": {
+"Focus Crystals": 1,
+"Germanium": 1,
+"Polymer Capacitors": 1
+},
+"5": {
+"Military Supercapacitors": 1,
+"Niobium": 1,
+"Refined Focus Crystals": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Configurable Components": 1,
+"Precipitated Alloys": 1,
+"Technetium": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Cracked Industrial Firmware": 1,
+"Thermic Alloys": 1
+}
+},
+"Dazzle Shell": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Manganese": 4,
+"Hybrid Capacitors": 5,
+"Mechanical Components": 5
+}
+},
+"Dispersal Field": {
+"experimental": {
+"Conductive Components": 5,
+"Hybrid Capacitors": 5,
+"Irregular Emission Data": 5,
+"Worn Shield Emitters": 5
+}
+},
+"Target Lock Breaker": {
+"experimental": {
+"Selenium": 5,
+"Security Firmware Patch": 3,
+"Adaptive Encryptors Capture": 1
+}
+},
+"Thermal Conduit": {
+"experimental": {
+"Heat Dispersion Plate": 5,
+"Sulphur": 5,
+"Tempered Alloys": 5
+}
+},
+"Phasing Sequence": {
+"experimental": {
+"Focus Crystals": 5,
+"Aberrant Shield Pattern Analysis": 3,
+"Niobium": 3,
+"Configurable Components": 3
+}
+},
+"Plasma Slug": {
+"experimental": {
+"Heat Exchangers": 3,
+"Modified Embedded Firmware": 2,
+"Refined Focus Crystals": 2,
+"Mercury": 4
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Electronic Countermeasure": {
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+}
+},
+"Life Support": {
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Radiolic Alloys": 1,
+"Proto Light Alloys": 1
+}
+},
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Core Dynamics Composites": 1,
+"Compound Shielding": 1,
+"Tungsten": 1
+}
+}
+},
+"Hull Reinforcement Package": {
+"Heavy Duty Hull Reinforcement": {
+"1": {
+"Carbon": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Thermal Resistant Hull Reinforcement": {
+"1": {
+"Heat Conduction Wiring": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Nickel": 1
+},
+"3": {
+"Heat Exchangers": 1,
+"Salvaged Alloys": 1,
+"Vanadium": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Tungsten": 1,
+"Heat Vanes": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Molybdenum": 1,
+"Proto Heat Radiators": 1
+}
+},
+"Kinetic Resistant Hull Reinforcement": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Vanadium": 1
+},
+"3": {
+"High Density Composites": 1,
+"Salvaged Alloys": 1,
+"Vanadium": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Tungsten": 1,
+"Proprietary Composites": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Molybdenum": 1,
+"Core Dynamics Composites": 1
+}
+},
+"Blast Resistant Hull Reinforcement": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Carbon": 1,
+"Zinc": 1
+},
+"3": {
+"Salvaged Alloys": 1,
+"Vanadium": 1,
+"Zirconium": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Tungsten": 1,
+"Mercury": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Molybdenum": 1,
+"Ruthenium": 1
+}
+},
+"Lightweight Hull Reinforcement": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Conductive Components": 1,
+"Iron": 1
+},
+"3": {
+"Conductive Components": 1,
+"High Density Composites": 1,
+"Iron": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Germanium": 1,
+"Proprietary Composites": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Military Grade Alloys": 1,
+"Tin": 1
+}
+},
+"Angled Plating": {
+"experimental": {
+"Tempered Alloys": 5,
+"Zirconium": 3,
+"Carbon": 5,
+"High Density Composites": 3
+}
+},
+"Layered Plating": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"Shielding Sensors": 3,
+"Tungsten": 3
+}
+},
+"Reflective Plating": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"Heat Dispersion Plate": 3,
+"Proto Light Alloys": 1,
+"Zinc": 4
+}
+},
+"Deep Plating": {
+"experimental": {
+"Compact Composites": 5,
+"Molybdenum": 3,
+"Ruthenium": 2
+}
+}
+},
+"Cannon": {
+"Short Range Blaster": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"3": {
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Configurable Components": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Cracked Industrial Firmware": 1,
+"Thermic Alloys": 1
+}
+},
+"High Capacity Magazine": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Vanadium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+},
+"4": {
+"High Density Composites": 1,
+"Mechanical Equipment": 1,
+"Tin": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Configurable Components": 1,
+"Precipitated Alloys": 1,
+"Technetium": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Auto Loader": {
+"experimental": {
+"Mechanical Equipment": 4,
+"Mechanical Components": 3,
+"High Density Composites": 3
+}
+},
+"Dispersal Field": {
+"experimental": {
+"Conductive Components": 5,
+"Hybrid Capacitors": 5,
+"Irregular Emission Data": 5,
+"Worn Shield Emitters": 5
+}
+},
+"Force Shell": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Zinc": 5,
+"Phase Alloys": 3,
+"Heat Conduction Wiring": 3
+}
+},
+"High Yield Shell": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Proto Light Alloys": 3,
+"Chemical Manipulators": 3,
+"Nickel": 5
+}
+},
+"Smart Rounds": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Security Firmware Patch": 3,
+"Decoded Emission Data": 3,
+"Classified Scan Databanks": 3
+}
+},
+"Thermal Cascade": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"Hybrid Capacitors": 4,
+"High Density Composites": 3,
+"Phosphorus": 5
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Thrusters": {
+"Drive Strengthening": {
+"1": {
+"Carbon": 1
+},
+"2": {
+"Heat Conduction Wiring": 1,
+"Vanadium": 1
+},
+"3": {
+"Heat Conduction Wiring": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"4": {
+"Compound Shielding": 1,
+"Heat Dispersion Plate": 1,
+"High Density Composites": 1
+},
+"5": {
+"Heat Exchangers": 1,
+"Imperial Shielding": 1,
+"Proprietary Composites": 1
+}
+},
+"Dirty Drive Tuning": {
+"1": {
+"Specialised Legacy Firmware": 1
+},
+"2": {
+"Mechanical Equipment": 1,
+"Specialised Legacy Firmware": 1
+},
+"3": {
+"Chromium": 1,
+"Mechanical Components": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Configurable Components": 1,
+"Modified Consumer Firmware": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Cracked Industrial Firmware": 1,
+"Pharmaceutical Isolators": 1
+}
+},
+"Clean Drive Tuning": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Conductive Components": 1,
+"Specialised Legacy Firmware": 1
+},
+"3": {
+"Conductive Components": 1,
+"Specialised Legacy Firmware": 1,
+"Unexpected Emission Data": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Decoded Emission Data": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Abnormal Compact Emission Data": 1,
+"Conductive Ceramics": 1,
+"Tin": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Iron": 5,
+"Hybrid Capacitors": 3,
+"Proto Light Alloys": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Iron": 5,
+"Hybrid Capacitors": 3,
+"Proprietary Composites": 1
+}
+},
+"Drive Distributors": {
+"experimental": {
+"Iron": 5,
+"Hybrid Capacitors": 3,
+"Security Firmware Patch": 1
+}
+},
+"Drag Drives": {
+"experimental": {
+"Iron": 5,
+"Hybrid Capacitors": 3,
+"Security Firmware Patch": 1
+}
+},
+"Thermal Spread": {
+"experimental": {
+"Iron": 5,
+"Hybrid Capacitors": 3,
+"Heat Vanes": 1
+}
+}
+},
+"Multi-cannon": {
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Short Range Blaster": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"3": {
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Configurable Components": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"High Capacity Magazine": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Vanadium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+},
+"4": {
+"High Density Composites": 1,
+"Mechanical Equipment": 1,
+"Tin": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Configurable Components": 1,
+"Precipitated Alloys": 1,
+"Technetium": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Cracked Industrial Firmware": 1,
+"Thermic Alloys": 1
+}
+},
+"Auto Loader": {
+"experimental": {
+"Mechanical Equipment": 4,
+"Mechanical Components": 3,
+"High Density Composites": 3
+}
+},
+"Corrosive Shell": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Precipitated Alloys": 4,
+"Arsenic": 3
+}
+},
+"Emissive Munitions": {
+"experimental": {
+"Mechanical Equipment": 4,
+"Unexpected Emission Data": 3,
+"Heat Exchangers": 3,
+"Manganese": 3
+}
+},
+"Thermal Shock": {
+"experimental": {
+"Flawed Focus Crystals": 5,
+"Heat Resistant Ceramics": 3,
+"Conductive Components": 3,
+"Tungsten": 3
+}
+},
+"Incendiary Rounds": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"Phosphorus": 5,
+"Sulphur": 5,
+"Phase Alloys": 3
+}
+},
+"Smart Rounds": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Security Firmware Patch": 3,
+"Decoded Emission Data": 3,
+"Classified Scan Databanks": 3
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Missile Rack": {
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Precipitated Alloys": 1,
+"Configurable Components": 1,
+"Technetium": 1
+}
+},
+"High Capacity Magazine": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Vanadium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+},
+"4": {
+"High Density Composites": 1,
+"Mechanical Equipment": 1,
+"Tin": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Drag Munition (Seeker only)": {
+"experimental": {
+"Carbon": 5,
+"Grid Resistors": 5,
+"Molybdenum": 2
+}
+},
+"Emissive Munitions": {
+"experimental": {
+"Mechanical Equipment": 4,
+"Unexpected Emission Data": 3,
+"Heat Exchangers": 3,
+"Manganese": 3
+}
+},
+"Overload Munitions": {
+"experimental": {
+"Filament Composites": 5,
+"Tagged Encryption Codes": 4,
+"Aberrant Shield Pattern Analysis": 2,
+"Germanium": 3
+}
+},
+"Thermal Cascade": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"Hybrid Capacitors": 4,
+"High Density Composites": 3,
+"Phosphorus": 5
+}
+},
+"Penetrator Munitions (Dumbfire only)": {
+"experimental": {
+"Galvanising Alloys": 5,
+"Electrochemical Arrays": 3,
+"Zirconium": 3
+}
+},
+"FSD Interrupt (Dumbfire only)": {
+"experimental": {
+"Strange Wake Solutions": 3,
+"Anomalous FSD Telemetry": 5,
+"Mechanical Equipment": 5,
+"Configurable Components": 3
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Power Plant": {
+"Armoured": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Low Emissions": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Iron": 1,
+"Irregular Emission Data": 1
+},
+"3": {
+"Heat Exchangers": 1,
+"Iron": 1,
+"Irregular Emission Data": 1
+},
+"4": {
+"Germanium": 1,
+"Unexpected Emission Data": 1,
+"Heat Vanes": 1
+},
+"5": {
+"Niobium": 1,
+"Decoded Emission Data": 1,
+"Proto Heat Radiators": 1
+}
+},
+"Overcharged": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Conductive Components": 1,
+"Heat Conduction Wiring": 1
+},
+"3": {
+"Conductive Components": 1,
+"Heat Conduction Wiring": 1,
+"Selenium": 1
+},
+"4": {
+"Cadmium": 1,
+"Conductive Ceramics": 1,
+"Heat Dispersion Plate": 1
+},
+"5": {
+"Chemical Manipulators": 1,
+"Conductive Ceramics": 1,
+"Tellurium": 1
+}
+},
+"Thermal Spread": {
+"experimental": {
+"Grid Resistors": 5,
+"Vanadium": 3,
+"Heat Vanes": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Grid Resistors": 5,
+"Vanadium": 3,
+"Proto Light Alloys": 1
+}
+},
+"Monstered": {
+"experimental": {
+"Grid Resistors": 5,
+"Vanadium": 3,
+"Polymer Capacitors": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Grid Resistors": 5,
+"Vanadium": 3,
+"Proprietary Composites": 1
+}
+}
+},
+"Chaff Launcher": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Ammo Capacity": {
+"1": {
+"Mechanical Scrap": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+},
+"Frame Shift Drive Interdictor": {
+"Long Range FSD Interdictor": {
+"1": {
+"Unusual Encrypted Files": 1
+},
+"2": {
+"Atypical Disrupted Wake Echoes": 1,
+"Tagged Encryption Codes": 1
+},
+"3": {
+"Anomalous Bulk Scan Data": 1,
+"Anomalous FSD Telemetry": 1,
+"Open Symmetric Keys": 1
+},
+"4": {
+"Unidentified Scan Archives": 1,
+"Strange Wake Solutions": 1,
+"Atypical Encryption Archives": 1
+},
+"5": {
+"Classified Scan Databanks": 1,
+"Eccentric Hyperspace Trajectories": 1,
+"Adaptive Encryptors Capture": 1
+}
+},
+"Expanded FSD Interdictor Capture Arc": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Equipment": 1,
+"Unusual Encrypted Files": 1
+},
+"3": {
+"Grid Resistors": 1,
+"Mechanical Components": 1,
+"Tagged Encryption Codes": 1
+},
+"4": {
+"Divergent Scan Data": 1,
+"Mechanical Equipment": 1,
+"Strange Wake Solutions": 1
+},
+"5": {
+"Classified Scan Fragment": 1,
+"Eccentric Hyperspace Trajectories": 1,
+"Mechanical Components": 1
+}
+}
+},
+"Shield Generator": {
+"Reinforced Shields": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Conductive Components": 1,
+"Phosphorus": 1
+},
+"3": {
+"Conductive Components": 1,
+"Mechanical Components": 1,
+"Phosphorus": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Configurable Components": 1,
+"Manganese": 1
+},
+"5": {
+"Arsenic": 1,
+"Conductive Polymers": 1,
+"Improvised Components": 1
+}
+},
+"Enhanced, Low Power Shields": {
+"1": {
+"Distorted Shield Cycle Recordings": 1
+},
+"2": {
+"Distorted Shield Cycle Recordings": 1,
+"Germanium": 1
+},
+"3": {
+"Distorted Shield Cycle Recordings": 1,
+"Germanium": 1,
+"Precipitated Alloys": 1
+},
+"4": {
+"Inconsistent Shield Soak Analysis": 1,
+"Niobium": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Military Grade Alloys": 1,
+"Tin": 1,
+"Untypical Shield Scans": 1
+}
+},
+"Thermal Resistant Shields": {
+"1": {
+"Distorted Shield Cycle Recordings": 1
+},
+"2": {
+"Distorted Shield Cycle Recordings": 1,
+"Germanium": 1
+},
+"3": {
+"Distorted Shield Cycle Recordings": 1,
+"Germanium": 1,
+"Selenium": 1
+},
+"4": {
+"Focus Crystals": 1,
+"Inconsistent Shield Soak Analysis": 1,
+"Mercury": 1
+},
+"5": {
+"Refined Focus Crystals": 1,
+"Ruthenium": 1,
+"Untypical Shield Scans": 1
+}
+},
+"Kinetic Resistant Shields": {
+"1": {
+"Distorted Shield Cycle Recordings": 1
+},
+"2": {
+"Distorted Shield Cycle Recordings": 1,
+"Modified Consumer Firmware": 1
+},
+"3": {
+"Distorted Shield Cycle Recordings": 1,
+"Modified Consumer Firmware": 1,
+"Selenium": 1
+},
+"4": {
+"Focus Crystals": 1,
+"Inconsistent Shield Soak Analysis": 1,
+"Mercury": 1
+},
+"5": {
+"Refined Focus Crystals": 1,
+"Ruthenium": 1,
+"Untypical Shield Scans": 1
+}
+},
+"Hi-cap": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Conductive Polymers": 1
+}
+},
+"Multi-weave": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Aberrant Shield Pattern Analysis": 1
+}
+},
+"Thermo Block": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Heat Vanes": 1
+}
+},
+"Fast Charge": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Compound Shielding": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Configurable Components": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Proto Light Alloys": 1
+}
+},
+"Force Block": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Decoded Emission Data": 1
+}
+},
+"Lo-draw": {
+"experimental": {
+"Worn Shield Emitters": 5,
+"Flawed Focus Crystals": 3,
+"Conductive Polymers": 1
+}
+}
+},
+"Point Defence": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Ammo Capacity": {
+"1": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+},
+"Shield Booster": {
+"Thermal Resistant": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Germanium": 1,
+"Heat Conduction Wiring": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Heat Conduction Wiring": 1,
+"Heat Dispersion Plate": 1
+},
+"4": {
+"Heat Dispersion Plate": 1,
+"Untypical Shield Scans": 1,
+"Refined Focus Crystals": 1
+},
+"5": {
+"Heat Exchangers": 1,
+"Aberrant Shield Pattern Analysis": 1,
+"Exquisite Focus Crystals": 1
+}
+},
+"Kinetic Resistant": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Germanium": 1,
+"Grid Resistors": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Hybrid Capacitors": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Untypical Shield Scans": 1,
+"Refined Focus Crystals": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Aberrant Shield Pattern Analysis": 1,
+"Exquisite Focus Crystals": 1
+}
+},
+"Heavy Duty": {
+"1": {
+"Grid Resistors": 1
+},
+"2": {
+"Distorted Shield Cycle Recordings": 1,
+"Hybrid Capacitors": 1
+},
+"3": {
+"Distorted Shield Cycle Recordings": 1,
+"Hybrid Capacitors": 1,
+"Niobium": 1
+},
+"4": {
+"Electrochemical Arrays": 1,
+"Inconsistent Shield Soak Analysis": 1,
+"Tin": 1
+},
+"5": {
+"Antimony": 1,
+"Polymer Capacitors": 1,
+"Untypical Shield Scans": 1
+}
+},
+"Resistance Augmented": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Conductive Components": 1,
+"Phosphorus": 1
+},
+"3": {
+"Conductive Components": 1,
+"Focus Crystals": 1,
+"Phosphorus": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Refined Focus Crystals": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Imperial Shielding": 1,
+"Refined Focus Crystals": 1
+}
+},
+"Blast Resistant": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Conductive Components": 1,
+"Iron": 1
+},
+"3": {
+"Conductive Components": 1,
+"Focus Crystals": 1,
+"Iron": 1
+},
+"4": {
+"Germanium": 1,
+"Untypical Shield Scans": 1,
+"Refined Focus Crystals": 1
+},
+"5": {
+"Niobium": 1,
+"Aberrant Shield Pattern Analysis": 1,
+"Exquisite Focus Crystals": 1
+}
+},
+"Force Block": {
+"experimental": {
+"Unidentified Scan Archives": 5,
+"Shielding Sensors": 3,
+"Aberrant Shield Pattern Analysis": 2
+}
+},
+"Thermo Block": {
+"experimental": {
+"Anomalous Bulk Scan Data": 5,
+"Conductive Ceramics": 3,
+"Heat Vanes": 3
+}
+},
+"Blast Block": {
+"experimental": {
+"Inconsistent Shield Soak Analysis": 5,
+"Heat Resistant Ceramics": 3,
+"Heat Dispersion Plate": 3,
+"Selenium": 2
+}
+},
+"Flow Control": {
+"experimental": {
+"Inconsistent Shield Soak Analysis": 5,
+"Security Firmware Patch": 3,
+"Focus Crystals": 3,
+"Niobium": 3
+}
+},
+"Double Braced": {
+"experimental": {
+"Distorted Shield Cycle Recordings": 5,
+"Galvanising Alloys": 3,
+"Shield Emitters": 3
+}
+},
+"Super Capacitor": {
+"experimental": {
+"Untypical Shield Scans": 3,
+"Compact Composites": 5,
+"Cadmium": 2
+}
+}
+},
+"Kill Warrant Scanner": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Long Range Scanner": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Iron": 1,
+"Hybrid Capacitors": 1
+},
+"3": {
+"Iron": 1,
+"Hybrid Capacitors": 1,
+"Unexpected Emission Data": 1
+},
+"4": {
+"Germanium": 1,
+"Electrochemical Arrays": 1,
+"Decoded Emission Data": 1
+},
+"5": {
+"Niobium": 1,
+"Polymer Capacitors": 1,
+"Abnormal Compact Emission Data": 1
+}
+},
+"Wide Angle Scanner": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Germanium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Germanium": 1,
+"Classified Scan Databanks": 1
+},
+"4": {
+"Mechanical Equipment": 1,
+"Niobium": 1,
+"Divergent Scan Data": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Tin": 1,
+"Classified Scan Fragment": 1
+}
+},
+"Fast Scanner": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Phosphorus": 1,
+"Flawed Focus Crystals": 1
+},
+"3": {
+"Phosphorus": 1,
+"Flawed Focus Crystals": 1,
+"Open Symmetric Keys": 1
+},
+"4": {
+"Manganese": 1,
+"Focus Crystals": 1,
+"Atypical Encryption Archives": 1
+},
+"5": {
+"Arsenic": 1,
+"Refined Focus Crystals": 1,
+"Adaptive Encryptors Capture": 1
+}
+}
+},
+"Rail Gun": {
+"Short Range Blaster": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"3": {
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Configurable Components": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Thermic Alloys": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"High Capacity Magazine": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Vanadium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+},
+"4": {
+"High Density Composites": 1,
+"Mechanical Equipment": 1,
+"Tin": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Feedback Cascade": {
+"experimental": {
+"Open Symmetric Keys": 5,
+"Shield Emitters": 5,
+"Filament Composites": 5
+}
+},
+"Plasma Slug": {
+"experimental": {
+"Heat Exchangers": 3,
+"Modified Embedded Firmware": 2,
+"Refined Focus Crystals": 2,
+"Mercury": 4
+}
+},
+"Super Penetrator": {
+"experimental": {
+"Proto Light Alloys": 3,
+"Refined Focus Crystals": 3,
+"Zirconium": 3,
+"Untypical Shield Scans": 5
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Power Distributor": {
+"Weapon Focused": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Conductive Components": 1,
+"Sulphur": 1
+},
+"3": {
+"Anomalous Bulk Scan Data": 1,
+"Hybrid Capacitors": 1,
+"Selenium": 1
+},
+"4": {
+"Unidentified Scan Archives": 1,
+"Electrochemical Arrays": 1,
+"Cadmium": 1
+},
+"5": {
+"Classified Scan Databanks": 1,
+"Polymer Capacitors": 1,
+"Tellurium": 1
+}
+},
+"System Focused": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Conductive Components": 1,
+"Sulphur": 1
+},
+"3": {
+"Anomalous Bulk Scan Data": 1,
+"Chromium": 1,
+"Electrochemical Arrays": 1
+},
+"4": {
+"Unidentified Scan Archives": 1,
+"Selenium": 1,
+"Polymer Capacitors": 1
+},
+"5": {
+"Classified Scan Databanks": 1,
+"Cadmium": 1,
+"Military Supercapacitors": 1
+}
+},
+"Engine Focused": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Conductive Components": 1,
+"Sulphur": 1
+},
+"3": {
+"Anomalous Bulk Scan Data": 1,
+"Chromium": 1,
+"Electrochemical Arrays": 1
+},
+"4": {
+"Unidentified Scan Archives": 1,
+"Selenium": 1,
+"Polymer Capacitors": 1
+},
+"5": {
+"Classified Scan Databanks": 1,
+"Cadmium": 1,
+"Military Supercapacitors": 1
+}
+},
+"High Charge Capacity": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Chromium": 1,
+"Specialised Legacy Firmware": 1
+},
+"3": {
+"Chromium": 1,
+"High Density Composites": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Modified Consumer Firmware": 1,
+"Proprietary Composites": 1,
+"Selenium": 1
+},
+"5": {
+"Cracked Industrial Firmware": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Charge Enhanced": {
+"1": {
+"Specialised Legacy Firmware": 1
+},
+"2": {
+"Chemical Processors": 1,
+"Specialised Legacy Firmware": 1
+},
+"3": {
+"Chemical Distillery": 1,
+"Grid Resistors": 1,
+"Modified Consumer Firmware": 1
+},
+"4": {
+"Chemical Manipulators": 1,
+"Cracked Industrial Firmware": 1,
+"Hybrid Capacitors": 1
+},
+"5": {
+"Chemical Manipulators": 1,
+"Cracked Industrial Firmware": 1,
+"Exquisite Focus Crystals": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Phosphorus": 5,
+"Heat Resistant Ceramics": 3,
+"Conductive Polymers": 1
+}
+},
+"Super Conduits": {
+"experimental": {
+"Phosphorus": 5,
+"Heat Resistant Ceramics": 3,
+"Security Firmware Patch": 1
+}
+},
+"Cluster Capacitor": {
+"experimental": {
+"Phosphorus": 5,
+"Heat Resistant Ceramics": 3,
+"Cadmium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Phosphorus": 5,
+"Heat Resistant Ceramics": 3,
+"Proto Light Alloys": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Phosphorus": 5,
+"Heat Resistant Ceramics": 3,
+"Proprietary Composites": 1
+}
+}
+},
+"Fragment Cannon": {
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"High Capacity Magazine": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Vanadium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+},
+"4": {
+"High Density Composites": 1,
+"Mechanical Equipment": 1,
+"Tin": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Configurable Components": 1,
+"Precipitated Alloys": 1,
+"Technetium": 1
+}
+},
+"Double Shot": {
+"1": {
+"Carbon": 1
+},
+"2": {
+"Carbon": 1,
+"Mechanical Equipment": 1
+},
+"3": {
+"Carbon": 1,
+"Cracked Industrial Firmware": 1,
+"Mechanical Equipment": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Security Firmware Patch": 1,
+"Vanadium": 1
+},
+"5": {
+"High Density Composites": 1,
+"Configurable Components": 1,
+"Modified Embedded Firmware": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Corrosive Shell": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Precipitated Alloys": 4,
+"Arsenic": 3
+}
+},
+"Dazzle Shell": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Manganese": 4,
+"Hybrid Capacitors": 5
+}
+},
+"Drag Munition": {
+"experimental": {
+"Carbon": 5,
+"Grid Resistors": 5,
+"Molybdenum": 2
+}
+},
+"Incendiary Rounds": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"Phosphorus": 5,
+"Sulphur": 5,
+"Phase Alloys": 3
+}
+},
+"Screening Shell": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Distorted Shield Cycle Recordings": 5,
+"Modified Consumer Firmware": 5,
+"Niobium": 3
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Mine Launcher": {
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Radiolic Alloys": 1,
+"Proto Light Alloys": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Configurable Components": 1,
+"Technetium": 1,
+"Precipitated Alloys": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"High Capacity Magazine": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Vanadium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+},
+"4": {
+"High Density Composites": 1,
+"Mechanical Equipment": 1,
+"Tin": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Military Supercapacitors": 1,
+"Proprietary Composites": 1
+}
+},
+"Ion Disruptor": {
+"experimental": {
+"Sulphur": 5,
+"Phosphorus": 5,
+"Chemical Distillery": 3,
+"Electrochemical Arrays": 3
+}
+},
+"Overload Munitions": {
+"experimental": {
+"Filament Composites": 5,
+"Tagged Encryption Codes": 4,
+"Aberrant Shield Pattern Analysis": 2,
+"Germanium": 3
+}
+},
+"Radiant Canister": {
+"experimental": {
+"Polonium": 1,
+"Phase Alloys": 3,
+"Heat Dispersion Plate": 4
+}
+},
+"Reverberating Cascade": {
+"experimental": {
+"Configurable Components": 2,
+"Classified Scan Databanks": 3,
+"Filament Composites": 4,
+"Chromium": 4
+}
+},
+"Shift-Lock Canister": {
+"experimental": {
+"Tempered Alloys": 5,
+"Strange Wake Solutions": 3,
+"Salvaged Alloys": 5
+}
+},
+"Emissive Munitions": {
+"experimental": {
+"Mechanical Equipment": 4,
+"Unexpected Emission Data": 3,
+"Heat Exchangers": 3,
+"Manganese": 3
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+}
+},
+"Beam Laser": {
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Short Range Blaster": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"3": {
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Configurable Components": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Cracked Industrial Firmware": 1,
+"Thermic Alloys": 1,
+"Biotech Conductors": 1
+}
+},
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Concordant Sequence": {
+"experimental": {
+"Focus Crystals": 5,
+"Modified Embedded Firmware": 3,
+"Zirconium": 1
+}
+},
+"Regeneration Sequence": {
+"experimental": {
+"Refined Focus Crystals": 3,
+"Shielding Sensors": 4,
+"Peculiar Shield Frequency Data": 1
+}
+},
+"Thermal Conduit": {
+"experimental": {
+"Heat Dispersion Plate": 5,
+"Sulphur": 5,
+"Tempered Alloys": 5
+}
+},
+"Thermal Shock": {
+"experimental": {
+"Flawed Focus Crystals": 5,
+"Heat Resistant Ceramics": 3,
+"Conductive Components": 3,
+"Tungsten": 3
+}
+},
+"Thermal Vent": {
+"experimental": {
+"Flawed Focus Crystals": 5,
+"Conductive Polymers": 3,
+"Precipitated Alloys": 3
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+}
+},
+"Armour": {
+"Blast Resistant": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Carbon": 1,
+"Zinc": 1
+},
+"3": {
+"Salvaged Alloys": 1,
+"Vanadium": 1,
+"Zirconium": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Tungsten": 1,
+"Mercury": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Molybdenum": 1,
+"Ruthenium": 1
+}
+},
+"Lightweight": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Conductive Components": 1,
+"Iron": 1
+},
+"3": {
+"Conductive Components": 1,
+"High Density Composites": 1,
+"Iron": 1
+},
+"4": {
+"Germanium": 1,
+"Conductive Ceramics": 1,
+"Proprietary Composites": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Tin": 1,
+"Military Grade Alloys": 1
+}
+},
+"Kinetic Resistant": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Vanadium": 1
+},
+"3": {
+"High Density Composites": 1,
+"Salvaged Alloys": 1,
+"Vanadium": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Tungsten": 1,
+"Proprietary Composites": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Molybdenum": 1,
+"Core Dynamics Composites": 1
+}
+},
+"Heavy Duty": {
+"1": {
+"Carbon": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Thermal Resistant": {
+"1": {
+"Heat Conduction Wiring": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Nickel": 1
+},
+"3": {
+"Heat Exchangers": 1,
+"Salvaged Alloys": 1,
+"Vanadium": 1
+},
+"4": {
+"Galvanising Alloys": 1,
+"Tungsten": 1,
+"Heat Vanes": 1
+},
+"5": {
+"Phase Alloys": 1,
+"Molybdenum": 1,
+"Proto Heat Radiators": 1
+}
+},
+"Angled Plating": {
+"experimental": {
+"Compact Composites": 5,
+"High Density Composites": 3,
+"Zirconium": 3
+}
+},
+"Layered Plating": {
+"experimental": {
+"Heat Conduction Wiring": 5,
+"High Density Composites": 3,
+"Niobium": 1
+}
+},
+"Reflective Plating": {
+"experimental": {
+"Compact Composites": 5,
+"Heat Dispersion Plate": 3,
+"Thermic Alloys": 2
+}
+},
+"Deep Plating": {
+"experimental": {
+"Compact Composites": 5,
+"Mechanical Equipment": 3,
+"Molybdenum": 2
+}
+}
+},
+"Prospector Limpet Controller": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+},
+"Manifest Scanner": {
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Long Range Scanner": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Iron": 1,
+"Hybrid Capacitors": 1
+},
+"3": {
+"Iron": 1,
+"Hybrid Capacitors": 1,
+"Unexpected Emission Data": 1
+},
+"4": {
+"Germanium": 1,
+"Electrochemical Arrays": 1,
+"Decoded Emission Data": 1
+},
+"5": {
+"Niobium": 1,
+"Polymer Capacitors": 1,
+"Abnormal Compact Emission Data": 1
+}
+},
+"Wide Angle Scanner": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Germanium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Germanium": 1,
+"Classified Scan Databanks": 1
+},
+"4": {
+"Mechanical Equipment": 1,
+"Niobium": 1,
+"Divergent Scan Data": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Tin": 1,
+"Classified Scan Fragment": 1
+}
+},
+"Fast Scanner": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Phosphorus": 1,
+"Flawed Focus Crystals": 1
+},
+"3": {
+"Phosphorus": 1,
+"Flawed Focus Crystals": 1,
+"Open Symmetric Keys": 1
+},
+"4": {
+"Manganese": 1,
+"Focus Crystals": 1,
+"Atypical Encryption Archives": 1
+},
+"5": {
+"Arsenic": 1,
+"Refined Focus Crystals": 1,
+"Adaptive Encryptors Capture": 1
+}
+}
+},
+"Burst Laser": {
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Focused Weapon": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Conductive Components": 1,
+"Iron": 1
+},
+"3": {
+"Chromium": 1,
+"Conductive Ceramics": 1,
+"Iron": 1
+},
+"4": {
+"Focus Crystals": 1,
+"Germanium": 1,
+"Polymer Capacitors": 1
+},
+"5": {
+"Military Supercapacitors": 1,
+"Niobium": 1,
+"Refined Focus Crystals": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Precipitated Alloys": 1,
+"Configurable Components": 1,
+"Technetium": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Thermic Alloys": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Short Range Blaster": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"3": {
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Electrochemical Arrays": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Configurable Components": 1,
+"Cracked Industrial Firmware": 1
+}
+},
+"Concordant Sequence": {
+"experimental": {
+"Focus Crystals": 5,
+"Modified Embedded Firmware": 3,
+"Zirconium": 1
+}
+},
+"Inertial Impact": {
+"experimental": {
+"Flawed Focus Crystals": 5,
+"Distorted Shield Cycle Recordings": 5,
+"Atypical Disrupted Wake Echoes": 5
+}
+},
+"Phasing Sequence": {
+"experimental": {
+"Focus Crystals": 5,
+"Aberrant Shield Pattern Analysis": 3,
+"Niobium": 3,
+"Configurable Components": 3
+}
+},
+"Scramble Spectrum": {
+"experimental": {
+"Crystal Shards": 5,
+"Untypical Shield Scans": 3,
+"Exceptional Scrambled Emission Data": 5
+}
+},
+"Thermal Shock": {
+"experimental": {
+"Flawed Focus Crystals": 5,
+"Heat Resistant Ceramics": 3,
+"Conductive Components": 3,
+"Tungsten": 3
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Heat Sink Launcher": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Ammo Capacity": {
+"1": {
+"Mechanical Scrap": 1,
+"Niobium": 1,
+"Vanadium": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+},
+"Wake Scanner": {
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Long Range Scanner": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Iron": 1,
+"Hybrid Capacitors": 1
+},
+"3": {
+"Iron": 1,
+"Hybrid Capacitors": 1,
+"Unexpected Emission Data": 1
+},
+"4": {
+"Germanium": 1,
+"Electrochemical Arrays": 1,
+"Decoded Emission Data": 1
+},
+"5": {
+"Niobium": 1,
+"Polymer Capacitors": 1,
+"Abnormal Compact Emission Data": 1
+}
+},
+"Wide Angle Scanner": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Germanium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Germanium": 1,
+"Classified Scan Databanks": 1
+},
+"4": {
+"Mechanical Equipment": 1,
+"Niobium": 1,
+"Divergent Scan Data": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Tin": 1,
+"Classified Scan Fragment": 1
+}
+},
+"Fast Scanner": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Phosphorus": 1,
+"Flawed Focus Crystals": 1
+},
+"3": {
+"Phosphorus": 1,
+"Flawed Focus Crystals": 1,
+"Open Symmetric Keys": 1
+},
+"4": {
+"Manganese": 1,
+"Focus Crystals": 1,
+"Atypical Encryption Archives": 1
+},
+"5": {
+"Arsenic": 1,
+"Refined Focus Crystals": 1,
+"Adaptive Encryptors Capture": 1
+}
+}
+},
+"Pulse Laser": {
+"Focused Weapon": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Conductive Components": 1,
+"Iron": 1
+},
+"3": {
+"Chromium": 1,
+"Conductive Ceramics": 1,
+"Iron": 1
+},
+"4": {
+"Focus Crystals": 1,
+"Germanium": 1,
+"Polymer Capacitors": 1
+},
+"5": {
+"Military Supercapacitors": 1,
+"Niobium": 1,
+"Refined Focus Crystals": 1
+}
+},
+"Long Range Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"3": {
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1,
+"Sulphur": 1
+},
+"4": {
+"Conductive Polymers": 1,
+"Focus Crystals": 1,
+"Modified Consumer Firmware": 1
+},
+"5": {
+"Biotech Conductors": 1,
+"Cracked Industrial Firmware": 1,
+"Thermic Alloys": 1
+}
+},
+"Rapid Fire Modification": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Mechanical Scrap": 1
+},
+"3": {
+"Mechanical Equipment": 1,
+"Precipitated Alloys": 1,
+"Specialised Legacy Firmware": 1
+},
+"4": {
+"Mechanical Components": 1,
+"Modified Consumer Firmware": 1,
+"Thermic Alloys": 1
+},
+"5": {
+"Configurable Components": 1,
+"Precipitated Alloys": 1,
+"Technetium": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Overcharged Weapon": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Conductive Components": 1,
+"Nickel": 1
+},
+"3": {
+"Conductive Components": 1,
+"Electrochemical Arrays": 1,
+"Nickel": 1
+},
+"4": {
+"Conductive Ceramics": 1,
+"Polymer Capacitors": 1,
+"Zinc": 1
+},
+"5": {
+"Conductive Polymers": 1,
+"Modified Embedded Firmware": 1,
+"Zirconium": 1
+}
+},
+"Efficient Weapon": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Heat Dispersion Plate": 1,
+"Sulphur": 1
+},
+"3": {
+"Chromium": 1,
+"Exceptional Scrambled Emission Data": 1,
+"Heat Exchangers": 1
+},
+"4": {
+"Heat Vanes": 1,
+"Irregular Emission Data": 1,
+"Selenium": 1
+},
+"5": {
+"Cadmium": 1,
+"Proto Heat Radiators": 1,
+"Unexpected Emission Data": 1
+}
+},
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Concordant Sequence": {
+"experimental": {
+"Focus Crystals": 5,
+"Modified Embedded Firmware": 3,
+"Zirconium": 1
+}
+},
+"Emissive Munitions": {
+"experimental": {
+"Mechanical Equipment": 4,
+"Unexpected Emission Data": 3,
+"Heat Exchangers": 3,
+"Manganese": 3
+}
+},
+"Phasing Sequence": {
+"experimental": {
+"Focus Crystals": 5,
+"Aberrant Shield Pattern Analysis": 3,
+"Niobium": 3,
+"Configurable Components": 3
+}
+},
+"Scramble Spectrum": {
+"experimental": {
+"Crystal Shards": 5,
+"Untypical Shield Scans": 3,
+"Exceptional Scrambled Emission Data": 5
+}
+},
+"Thermal Shock": {
+"experimental": {
+"Flawed Focus Crystals": 5,
+"Heat Resistant Ceramics": 3,
+"Conductive Components": 3,
+"Tungsten": 3
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+},
+"Multi-Servos": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Focus Crystals": 4,
+"Conductive Polymers": 2,
+"Configurable Components": 2
+}
+}
+},
+"Refinery": {
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Core Dynamics Composites": 1,
+"Compound Shielding": 1,
+"Tungsten": 1
+}
+}
+},
+"Auto Field-Maintenance Unit": {
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Core Dynamics Composites": 1,
+"Compound Shielding": 1,
+"Tungsten": 1
+}
+}
+},
+"Fuel Transfer Limpet Controller": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+}
+},
+"Frame Shift Drive": {
+"Increased FSD Range": {
+"1": {
+"Atypical Disrupted Wake Echoes": 1
+},
+"2": {
+"Atypical Disrupted Wake Echoes": 1,
+"Chemical Processors": 1
+},
+"3": {
+"Chemical Processors": 1,
+"Phosphorus": 1,
+"Strange Wake Solutions": 1
+},
+"4": {
+"Chemical Distillery": 1,
+"Eccentric Hyperspace Trajectories": 1,
+"Manganese": 1
+},
+"5": {
+"Arsenic": 1,
+"Chemical Manipulators": 1,
+"Datamined Wake Exceptions": 1
+}
+},
+"Faster FSD Boot Sequence": {
+"1": {
+"Grid Resistors": 1
+},
+"2": {
+"Chromium": 1,
+"Grid Resistors": 1
+},
+"3": {
+"Grid Resistors": 1,
+"Heat Dispersion Plate": 1,
+"Selenium": 1
+},
+"4": {
+"Cadmium": 1,
+"Heat Exchangers": 1,
+"Hybrid Capacitors": 1
+},
+"5": {
+"Electrochemical Arrays": 1,
+"Heat Vanes": 1,
+"Tellurium": 1
+}
+},
+"Shielded FSD": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"Shielding Sensors": 1,
+"Zinc": 1
+},
+"4": {
+"Compound Shielding": 1,
+"High Density Composites": 1,
+"Vanadium": 1
+},
+"5": {
+"Imperial Shielding": 1,
+"Proprietary Composites": 1,
+"Tungsten": 1
+}
+},
+"Deep Charge": {
+"experimental": {
+"Atypical Disrupted Wake Echoes": 5,
+"Galvanising Alloys": 3,
+"Eccentric Hyperspace Trajectories": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Atypical Disrupted Wake Echoes": 5,
+"Galvanising Alloys": 3,
+"Configurable Components": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Atypical Disrupted Wake Echoes": 5,
+"Galvanising Alloys": 3,
+"Proto Light Alloys": 1
+}
+},
+"Mass Manager": {
+"experimental": {
+"Atypical Disrupted Wake Echoes": 5,
+"Galvanising Alloys": 3,
+"Eccentric Hyperspace Trajectories": 1
+}
+},
+"Thermal Spread": {
+"experimental": {
+"Atypical Disrupted Wake Echoes": 5,
+"Galvanising Alloys": 3,
+"Heat Vanes": 1,
+"Grid Resistors": 3
+}
+}
+},
+"Hatch Breaker Limpet Controller": {
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+}
+},
+"Fuel Scoop": {
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Core Dynamics Composites": 1,
+"Compound Shielding": 1,
+"Tungsten": 1
+}
+}
+},
+"Torpedo Pylon": {
+"Lightweight Mount": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+},
+"Sturdy Mount": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Mass Lock Munition": {
+"experimental": {
+"Mechanical Equipment": 5,
+"High Density Composites": 3,
+"Aberrant Shield Pattern Analysis": 3
+}
+},
+"Penetrator Payload": {
+"experimental": {
+"Mechanical Components": 3,
+"Tungsten": 3,
+"Anomalous Bulk Scan Data": 5,
+"Selenium": 3
+}
+},
+"Reverberating Cascade": {
+"experimental": {
+"Configurable Components": 2,
+"Classified Scan Databanks": 3,
+"Filament Composites": 4,
+"Chromium": 4
+}
+},
+"Flow Control": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Hybrid Capacitors": 3,
+"Modified Embedded Firmware": 1
+}
+},
+"Oversized": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Mechanical Components": 3,
+"Ruthenium": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Salvaged Alloys": 5,
+"Carbon": 5,
+"Tin": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Mechanical Scrap": 5,
+"Compact Composites": 5,
+"Vanadium": 3
+}
+}
+},
+"Collector Limpet Controller": {
+"Reinforced": {
+"1": {
+"Nickel": 1
+},
+"2": {
+"Nickel": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Nickel": 1,
+"Shield Emitters": 1,
+"Tungsten": 1
+},
+"4": {
+"Molybdenum": 1,
+"Tungsten": 1,
+"Zinc": 1
+},
+"5": {
+"High Density Composites": 1,
+"Molybdenum": 1,
+"Technetium": 1
+}
+},
+"Shielded": {
+"1": {
+"Worn Shield Emitters": 1
+},
+"2": {
+"Carbon": 1,
+"Shield Emitters": 1
+},
+"3": {
+"Carbon": 1,
+"High Density Composites": 1,
+"Shield Emitters": 1
+},
+"4": {
+"Proprietary Composites": 1,
+"Shielding Sensors": 1,
+"Vanadium": 1
+},
+"5": {
+"Compound Shielding": 1,
+"Core Dynamics Composites": 1,
+"Tungsten": 1
+}
+},
+"Lightweight": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"3": {
+"Conductive Ceramics": 1,
+"Manganese": 1,
+"Salvaged Alloys": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+},
+"Shield Cell Bank": {
+"Rapid Charge": {
+"1": {
+"Sulphur": 1
+},
+"2": {
+"Chromium": 1,
+"Grid Resistors": 1
+},
+"3": {
+"Hybrid Capacitors": 1,
+"Precipitated Alloys": 1,
+"Sulphur": 1
+},
+"4": {
+"Chromium": 1,
+"Electrochemical Arrays": 1,
+"Thermic Alloys": 1
+}
+},
+"Specialised": {
+"1": {
+"Specialised Legacy Firmware": 1
+},
+"2": {
+"Conductive Components": 1,
+"Specialised Legacy Firmware": 1
+},
+"3": {
+"Conductive Components": 1,
+"Cracked Industrial Firmware": 1,
+"Exceptional Scrambled Emission Data": 1
+},
+"4": {
+"Conductive Components": 1,
+"Cracked Industrial Firmware": 1,
+"Yttrium": 1
+}
+},
+"Double Braced": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Chromium": 3,
+"Yttrium": 1
+}
+},
+"Flow Control": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Chromium": 3,
+"Conductive Polymers": 1
+}
+},
+"Stripped Down": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Chromium": 3,
+"Proto Light Alloys": 1
+}
+},
+"Boss Cells": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Chromium": 3,
+"Polymer Capacitors": 1
+}
+},
+"Recycling Cells": {
+"experimental": {
+"Chemical Storage Units": 5,
+"Chromium": 3,
+"Configurable Components": 1
+}
+}
+},
+"Sensors": {
+"Long Range Scanner": {
+"1": {
+"Iron": 1
+},
+"2": {
+"Iron": 1,
+"Hybrid Capacitors": 1
+},
+"3": {
+"Iron": 1,
+"Hybrid Capacitors": 1,
+"Unexpected Emission Data": 1
+},
+"4": {
+"Germanium": 1,
+"Electrochemical Arrays": 1,
+"Decoded Emission Data": 1
+},
+"5": {
+"Niobium": 1,
+"Polymer Capacitors": 1,
+"Abnormal Compact Emission Data": 1
+}
+},
+"Wide Angle Scanner": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Germanium": 1
+},
+"3": {
+"Germanium": 1,
+"Mechanical Scrap": 1,
+"Classified Scan Databanks": 1
+},
+"4": {
+"Mechanical Equipment": 1,
+"Niobium": 1,
+"Divergent Scan Data": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Tin": 1,
+"Classified Scan Fragment": 1
+}
+},
+"Light Weight Scanner": {
+"1": {
+"Phosphorus": 1
+},
+"2": {
+"Salvaged Alloys": 1,
+"Manganese": 1
+},
+"3": {
+"Salvaged Alloys": 1,
+"Manganese": 1,
+"Conductive Ceramics": 1
+},
+"4": {
+"Conductive Components": 1,
+"Phase Alloys": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Conductive Ceramics": 1,
+"Proto Light Alloys": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+},
+"Surface Scanner": {
+"Expanded Probe Scanning Radius": {
+"1": {
+"Mechanical Scrap": 1
+},
+"2": {
+"Mechanical Scrap": 1,
+"Germanium": 1
+},
+"3": {
+"Mechanical Scrap": 1,
+"Germanium": 1,
+"Phase Alloys": 1
+},
+"4": {
+"Mechanical Equipment": 1,
+"Niobium": 1,
+"Proto Light Alloys": 1
+},
+"5": {
+"Mechanical Components": 1,
+"Tin": 1,
+"Proto Radiolic Alloys": 1
+}
+}
+}
+}
+}

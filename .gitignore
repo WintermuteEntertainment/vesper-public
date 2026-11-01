@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Never commit real game data or secrets
+journals/
+*.log
+.env
+
+# Personal notes kept out of the public repo
+MY-SETUP.md
