@@ -179,3 +179,8 @@ git pull
 ```powershell
 .venv\Scripts\python -m unittest discover -s tests
 ```
+
+## License
+
+GPL-3.0. See [LICENSE](LICENSE). You may use, change and share Vesper; if you share a changed
+version, share its source under the same license.

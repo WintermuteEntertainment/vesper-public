@@ -7,6 +7,8 @@ name = "vesper"
 version = "0.1.0"
 description = "Vesper: a voice co-pilot for Elite Dangerous"
 requires-python = ">=3.11"
+license = {text = "GPL-3.0-only"}
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 (GPLv3)", "Operating System :: Microsoft :: Windows"]
 dependencies = []
 
 [project.optional-dependencies]
