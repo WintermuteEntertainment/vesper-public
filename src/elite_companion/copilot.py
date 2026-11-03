@@ -361,6 +361,7 @@ class Copilot:
         from .ptt import KeyPushToTalk, PushToTalk
         p, l = self.cfg["ptt"], self.cfg["listen"]
         self.recorder = Recorder(l["mic"])
+        self._silent_presses = 0
         print("Loading speech recognition...", flush=True)
         lang = language.code(self.cfg)
         self.transcriber = Transcriber(language.whisper_model(l["whisper_model"], lang), l["whisper_device"], lang)
@@ -390,8 +391,14 @@ class Copilot:
             try:
                 from .listen import is_silent
                 if is_silent(audio):
-                    self.say(t("mic_silent", mic=self.recorder.name()))
+                    # First silence: the mic was probably unplugged and replugged, so find it again and
+                    # ask for a repeat. Silence again straight after: say which mic, so it can be fixed.
+                    self._silent_presses += 1
+                    self.recorder.reconnect()
+                    self.say(t("mic_reconnected") if self._silent_presses == 1
+                             else t("mic_silent", mic=self.recorder.name()))
                     return
+                self._silent_presses = 0
                 heard = strip_echo(self.transcriber.transcribe(audio, self.name_hints()),
                                    self.speaker.recent if self.speaker else [])
                 if heard:

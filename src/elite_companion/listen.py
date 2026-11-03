@@ -37,6 +37,7 @@ def find_mic(name: str) -> int | None:
 class Recorder:
     """Records the microphone between start() and stop(), at 16 kHz mono (what Whisper expects)."""
     def __init__(self, mic: str = ""):
+        self.mic = mic
         self.device = find_mic(mic) if mic else None
         if mic and self.device is None:
             log.warning("no microphone matching %r; using the Windows default", mic)
@@ -52,6 +53,22 @@ class Recorder:
             self._stream = sd.InputStream(samplerate=RATE, channels=1, dtype="float32", device=self.device,
                                           callback=lambda data, frames, t, status: self._chunks.append(data.copy()))
             self._stream.start()
+
+    def reconnect(self) -> None:
+        """Re-read Windows' list of microphones and find ours again.
+
+        The audio library reads that list once, when Vesper starts. When a headset is unplugged and
+        plugged back in (a VR restart does this), the old entry keeps "working" but records pure
+        silence, until the list is read again.
+        """
+        import sounddevice as sd
+        with self._lock:
+            if self._stream is not None:  # never while recording
+                return
+            sd._terminate()
+            sd._initialize()
+            self.device = find_mic(self.mic) if self.mic else None
+        log.info("microphone list re-read; now recording from %s", self.name())
 
     def name(self) -> str:
         """The name of the microphone being recorded (the Windows default unless [listen] mic is set)."""
