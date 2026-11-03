@@ -328,6 +328,10 @@ class Copilot:
 
         def work():
             try:
+                from .listen import is_silent
+                if is_silent(audio):
+                    self.say(f"I can't hear anything. I'm listening to {self.recorder.name()}, and it's silent. Set [listen] mic in your config.toml.")
+                    return
                 heard = strip_echo(self.transcriber.transcribe(audio, self.name_hints()),
                                    self.speaker.recent if self.speaker else [])
                 if heard:

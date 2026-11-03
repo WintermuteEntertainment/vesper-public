@@ -148,6 +148,7 @@ and the home base can be changed through it, and those are shared with the voice
 |---|---|
 | "Questions need a Claude API key" | Do step 2, then close PowerShell and open a new one |
 | Nothing happens when I hold the button | Run step 3 again. A button Elite also uses still works for Elite, so pick a FREE one |
+| "I can't hear anything. I'm listening to ..." | Windows' default mic is silent (often Steam Streaming Microphone). Set `[listen] mic` to part of your real mic's name, e.g. `mic = "Headset"` |
 | She can't hear me, or hears the wrong thing | Set `[listen] mic` to part of your microphone's name. `whisper_model = "small.en"` is more accurate but slower |
 | Wrong voice or wrong speakers | `.venv\Scripts\vesper copilot --voices`, then set `[voice] voice` and `output_device` |
 | "No game data yet" | Play Elite once on this PC so it writes its journal, or check that Vesper is looking in your Saved Games folder |
