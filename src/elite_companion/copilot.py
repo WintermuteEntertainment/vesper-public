@@ -388,6 +388,10 @@ class Copilot:
 
         def work():
             try:
+                from .listen import is_silent
+                if is_silent(audio):
+                    self.say(t("mic_silent", mic=self.recorder.name()))
+                    return
                 heard = strip_echo(self.transcriber.transcribe(audio, self.name_hints()),
                                    self.speaker.recent if self.speaker else [])
                 if heard:

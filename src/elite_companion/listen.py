@@ -16,6 +16,13 @@ RATE = 16000
 GAME_NAMES = "Elite Dangerous. Vesper, Sol, Spansh, FSD, Onionhead, Anaconda, Cutter. "
 ENGLISH_GAME_WORDS = ("Commander, interdict, interdiction, supercruise, Interstellar Factors, material trader, "
                       "neutron, limpets, tritium, Imperial Slaves, sell market, buy market. ")
+SILENT_PEAK = 0.001  # loudest sample below this: the mic sent nothing (a muted or virtual mic reads 0.0000)
+
+
+def is_silent(audio: np.ndarray) -> bool:
+    """True for a real press (0.3 s or more) where the microphone sent pure silence, not just quiet: the
+    sign of a muted mic or a virtual one (like Steam Streaming Microphone) as the Windows default."""
+    return audio.size >= RATE * 0.3 and float(np.abs(audio).max()) < SILENT_PEAK
 
 
 def find_mic(name: str) -> int | None:
@@ -45,6 +52,14 @@ class Recorder:
             self._stream = sd.InputStream(samplerate=RATE, channels=1, dtype="float32", device=self.device,
                                           callback=lambda data, frames, t, status: self._chunks.append(data.copy()))
             self._stream.start()
+
+    def name(self) -> str:
+        """The name of the microphone being recorded (the Windows default unless [listen] mic is set)."""
+        import sounddevice as sd
+        try:
+            return sd.query_devices(sd.default.device[0] if self.device is None else self.device)["name"]
+        except Exception:  # noqa: BLE001 - only used in a spoken hint
+            return "the default microphone"
 
     def stop(self) -> np.ndarray:
         """Close the microphone and return everything recorded since start() as one float array."""

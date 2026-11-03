@@ -108,6 +108,7 @@ EN: dict[str, str | dict[str, str]] = {
     "local_not_set_up": "No local model is set up in config.",
     "local_mode": "Local mode.",
     "back_on_claude": "Back on Claude.",
+    "mic_silent": "I can't hear anything. I'm listening to {mic}, and it's silent. Set [listen] mic in your config.toml.",
     "pasted": "Pasted into {window}.",
     "the_active_window": "the active window",
     "paste_blocked": "Windows blocked the paste. Press Control V yourself.",

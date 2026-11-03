@@ -82,6 +82,7 @@
     "local_not_set_up": "In der Konfiguration ist kein lokales Modell eingerichtet.",
     "local_mode": "Lokaler Modus.",
     "back_on_claude": "Zurück bei Claude.",
+    "mic_silent": "Ich höre nichts. Ich höre auf {mic}, und es ist stumm. Stellen Sie [listen] mic in Ihrer config.toml ein.",
     "pasted": "In {window} eingefügt.",
     "the_active_window": "das aktive Fenster",
     "paste_blocked": "Windows hat das Einfügen blockiert. Drücken Sie selbst Steuerung V.",

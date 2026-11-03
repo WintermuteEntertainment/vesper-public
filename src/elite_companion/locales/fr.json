@@ -82,6 +82,7 @@
     "local_not_set_up": "Aucun modèle local n'est configuré.",
     "local_mode": "Mode local.",
     "back_on_claude": "Retour sur Claude.",
+    "mic_silent": "Je n'entends rien. J'écoute {mic}, et il est silencieux. Réglez [listen] mic dans votre config.toml.",
     "pasted": "Collé dans {window}.",
     "the_active_window": "la fenêtre active",
     "paste_blocked": "Windows a bloqué le collage. Appuyez vous-même sur Contrôle V.",
