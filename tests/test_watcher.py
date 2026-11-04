@@ -8,10 +8,11 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from elite_companion.journal import JournalTail  # noqa: E402
+from elite_companion.journal import JournalTail, journal_files  # noqa: E402
 from elite_companion.status import active_flags, flag_changes  # noqa: E402
 from elite_companion.watcher import Watcher  # noqa: E402
 
@@ -102,6 +103,23 @@ class TailTests(TempJournalDir):
         (self.dir / "Journal.2026-10-24T210000.01.log").write_text(line({"event": "Fileheader"}))
         self.assertEqual([e["event"] for e in tail.poll()], ["Shutdown", "Fileheader"])
         self.assertEqual(tail.path.name, "Journal.2026-10-24T210000.01.log")
+
+    def test_finding_journals_does_not_stat_each_file(self):
+        """Runs four times a second, so its cost must not grow with every journal the game has written."""
+        names = ["Journal.2026-10-23T200000.01.log", "Journal.2026-10-24T200000.01.log",
+                 "Journal.2026-10-24T210000.01.log"]
+        for name in reversed(names):
+            (self.dir / name).write_text(line({"event": "Fileheader"}))
+        real_stat, touched = Path.stat, []
+
+        def spy(path, **kwargs):
+            touched.append(path.name)
+            return real_stat(path, **kwargs)
+
+        with patch.object(Path, "stat", spy):
+            found = journal_files(self.dir)
+        self.assertEqual([p.name for p in found], names)
+        self.assertEqual([n for n in touched if n.startswith("Journal.")], [])
 
     def test_skips_garbage_lines(self):
         (self.dir / "Journal.2026-10-24T200000.01.log").write_text("not json\n" + line({"event": "Music"}))

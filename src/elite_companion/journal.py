@@ -40,8 +40,12 @@ def default_journal_dir() -> Path:
 
 
 def journal_files(directory: Path) -> list[Path]:
-    """Journal files oldest first. Current names sort by their timestamp."""
-    return sorted(directory.glob("Journal.*.log"), key=lambda p: (p.name, p.stat().st_mtime))
+    """Journal files oldest first. Current names sort by their timestamp.
+
+    JournalTail.poll() reaches this four times a second, so it must not touch each file: one
+    stat per journal gets slow once a player has hundreds. Names are unique, so name order is enough.
+    """
+    return sorted(directory.glob("Journal.*.log"), key=lambda p: p.name)
 
 
 def latest_journal(directory: Path) -> Path | None:
