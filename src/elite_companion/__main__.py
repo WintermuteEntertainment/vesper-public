@@ -52,6 +52,16 @@ def cmd_watch(watcher: Watcher, args) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Run a command; a mistake in the settings file is reported plainly, not as a traceback."""
+    from .config import ConfigError
+    try:
+        return _run(argv)
+    except ConfigError as e:
+        print(e, file=sys.stderr)
+        return 1
+
+
+def _run(argv: list[str] | None = None) -> int:
     """Entry point. `copilot`, `dashboard` and `logbook` have their own options and are handed over
     whole; `watch` and `state` are parsed here.
     """
@@ -66,7 +76,8 @@ def main(argv: list[str] | None = None) -> int:
         from .copilot import main as copilot_main
         return copilot_main(argv[1:])
 
-    parser = argparse.ArgumentParser(prog="vesper", description="Elite Dangerous journal watcher")
+    parser = argparse.ArgumentParser(prog="vesper", description="Elite Dangerous journal watcher",
+                                     epilog="Also: vesper dashboard (the status page on its own) and vesper logbook.")
     parser.add_argument("--dir", help="journal folder (default: Saved Games\\Frontier Developments\\Elite Dangerous)")
     sub = parser.add_subparsers(dest="command", required=True)
     w = sub.add_parser("watch", help="print events live as you play")

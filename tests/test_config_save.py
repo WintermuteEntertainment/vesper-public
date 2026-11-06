@@ -36,5 +36,27 @@ class AddSectionTests(unittest.TestCase):
         self.assertEqual(config.load(self.path)["ptt"]["key"], "Mouse 4")
 
 
+class ReadingTests(unittest.TestCase):
+    """Windows tools can save config.toml with a byte-order mark, and people make typos."""
+
+    def setUp(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.path = Path(tmp.name) / "config.toml"
+
+    def test_a_byte_order_mark_is_fine(self):
+        self.path.write_bytes(b"\xef\xbb\xbf[voice]\nrate = 3\n")
+        self.assertEqual(config.load(self.path)["voice"]["rate"], 3)
+        config.write_values({"voice.volume": 50}, self.path)
+        self.assertEqual(config.load(self.path)["voice"]["volume"], 50)
+        self.assertEqual(config.load(self.path)["voice"]["rate"], 3)
+
+    def test_a_typo_names_the_file(self):
+        self.path.write_text("[voice\nrate = 3\n", encoding="utf-8")
+        with self.assertRaises(config.ConfigError) as caught:
+            config.load(self.path)
+        self.assertIn(str(self.path), str(caught.exception))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -222,7 +222,7 @@
 <main id="settings" hidden></main>
 <main id="cockpit">
   <section class="bridge">
-    <h2 id="system">No signal</h2>
+    <h2 id="system">Connecting</h2>
     <p id="where"></p>
     <div class="flags" id="flags"></div>
     <p id="target" hidden></p>
@@ -277,7 +277,14 @@ function show(id, html) {
   if (html) $(id === "mission" ? "missions" : id).innerHTML = html;
 }
 function render(d) {
-  if (d.error) { $("stale").textContent = d.error; return; }
+  const waiting = !!d.error;  // connected, but no game data yet
+  document.querySelector(".instruments").hidden = waiting;
+  document.querySelector(".comms").hidden = waiting;
+  if (waiting) {
+    $("system").textContent = "Waiting for game data";
+    $("where").textContent = d.error;
+    return;
+  }
   $("cmdr").textContent = "CMDR " + d.commander;
   $("credits").textContent = num(d.credits) + " cr";
   $("legal").textContent = d.legal || "";

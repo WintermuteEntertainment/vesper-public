@@ -125,12 +125,19 @@ def add_section(section: str, lines: str, path: Path | None = None) -> bool:
     return True
 
 
+class ConfigError(ValueError):
+    """config.toml can't be read; the message says which file and where."""
+
+
 def load(path: Path | None = None) -> dict:
     """The settings: DEFAULTS merged with config.toml if it exists. Always returns every section and key."""
     path = path or CONFIG_PATH
     if path.exists():
-        with open(path, "rb") as f:
-            return _merge(DEFAULTS, tomllib.load(f))
+        try:
+            # utf-8-sig: some Windows tools start the file with a byte-order mark, which TOML doesn't allow
+            return _merge(DEFAULTS, tomllib.loads(path.read_bytes().decode("utf-8-sig")))
+        except (tomllib.TOMLDecodeError, UnicodeDecodeError) as e:
+            raise ConfigError(f"There's a mistake in your settings file, {path}: {e}") from e
     return copy.deepcopy(DEFAULTS)
 
 
@@ -210,7 +217,7 @@ def write_values(changes: dict, path: Path | None = None) -> bool:
     """
     path = path or CONFIG_PATH
     with _write_lock:
-        text = path.read_bytes().decode("utf-8") if path.exists() else ""
+        text = path.read_bytes().decode("utf-8-sig") if path.exists() else ""
         before = tomllib.loads(text)
         effective, expected, new_text = _merge(DEFAULTS, before), copy.deepcopy(before), text
         for dotted, value in changes.items():
