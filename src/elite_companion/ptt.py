@@ -8,12 +8,15 @@ still gets the press, so choose something Elite doesn't use (`vesper copilot --p
 from __future__ import annotations
 
 import ctypes
+import logging
 import threading
 import time
 from ctypes import wintypes
 from typing import Callable
 
+log = logging.getLogger(__name__)
 _winmm = ctypes.WinDLL("winmm")
+_winmm_lock = threading.Lock()  # several threads read the sticks; one call at a time is the cautious way to use winmm
 
 
 class _Caps(ctypes.Structure):
@@ -34,7 +37,15 @@ class _Info(ctypes.Structure):
 def _buttons(index: int) -> int | None:
     """The button bitmask of joystick `index`, or None if it's gone."""
     info = _Info(dwSize=ctypes.sizeof(_Info), dwFlags=0xFF)
-    return info.dwButtons if _winmm.joyGetPosEx(index, ctypes.byref(info)) == 0 else None
+    with _winmm_lock:
+        return info.dwButtons if _winmm.joyGetPosEx(index, ctypes.byref(info)) == 0 else None
+
+
+def _caps(index: int) -> _Caps | None:
+    """Joystick `index`'s capabilities, or None if there isn't one."""
+    caps = _Caps()
+    with _winmm_lock:
+        return caps if _winmm.joyGetDevCapsW(index, ctypes.byref(caps), ctypes.sizeof(caps)) == 0 else None
 
 
 def _product_name(vid: int, pid: int) -> str | None:
@@ -58,8 +69,8 @@ def joysticks() -> dict[int, tuple[str, str]]:
     from .bindings import device_mappings
     found = {}
     for i in range(16):
-        caps = _Caps()
-        if _winmm.joyGetDevCapsW(i, ctypes.byref(caps), ctypes.sizeof(caps)) == 0 and _buttons(i) is not None:
+        caps = _caps(i)
+        if caps is not None and _buttons(i) is not None:
             usb_id = f"{caps.wMid:04X}{caps.wPid:04X}"
             name = device_mappings().get(usb_id) or _product_name(caps.wMid, caps.wPid) or usb_id
             found[i] = (name, usb_id)

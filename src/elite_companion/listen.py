@@ -31,6 +31,18 @@ def find_mic(name: str) -> int | None:
     return None
 
 
+def list_mics() -> list[str]:
+    """The microphones Windows has active, for picking one. Each once: the same mic is listed under several
+    audio systems, some with the name cut off at 31 characters. WDM-KS also lists inactive jacks, so it's left out."""
+    import sounddevice as sd
+    apis = sd.query_hostapis()
+    names = [d["name"] for d in sd.query_devices() if d["max_input_channels"] > 0
+             and "WDM-KS" not in apis[d["hostapi"]]["name"]
+             and "Sound Mapper" not in d["name"] and "Primary Sound Capture" not in d["name"]]
+    unique = list(dict.fromkeys(names))
+    return [n for n in unique if not any(o != n and o.startswith(n) for o in unique)]
+
+
 class Recorder:
     """Records the microphone between start() and stop(), at 16 kHz mono (what Whisper expects)."""
     def __init__(self, mic: str = ""):
@@ -51,7 +63,12 @@ class Recorder:
                                           callback=lambda data, frames, t, status: self._chunks.append(data.copy()))
             self._stream.start()
 
-    def reconnect(self) -> None:
+    def set_mic(self, mic: str) -> bool:
+        """Switch microphones. False if push-to-talk is held right now (it switches at the next reconnect)."""
+        self.mic = mic
+        return self.reconnect()
+
+    def reconnect(self) -> bool:
         """Re-read Windows' list of microphones and find ours again.
 
         The audio library reads that list once, when Vesper starts. When a headset is unplugged and
@@ -61,11 +78,12 @@ class Recorder:
         import sounddevice as sd
         with self._lock:
             if self._stream is not None:  # never while recording
-                return
+                return False
             sd._terminate()
             sd._initialize()
             self.device = find_mic(self.mic) if self.mic else None
         log.info("microphone list re-read; now recording from %s", self.name())
+        return True
 
     def name(self) -> str:
         """The name of the microphone being recorded (the Windows default unless [listen] mic is set)."""

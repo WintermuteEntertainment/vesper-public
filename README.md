@@ -4,6 +4,8 @@ A voice co-pilot for Elite Dangerous. Hold a button, ask a question, hear the an
 by herself when something happens: hostile hails, interdictions, low fuel, missions about to expire,
 prospector readouts while mining.
 
+**This is an alpha.** Expect rough edges, and please [report what you find](https://github.com/WintermuteEntertainment/vesper-public/issues).
+
 Vesper only reads the game's own journal files. She never touches the game's memory or sends inputs,
 with one exception: when you say "paste", she presses Ctrl+V for you (for the galaxy map search).
 
@@ -93,26 +95,31 @@ Anything else goes to Claude, which can use about 60 tools. Some examples:
 
 ## Settings
 
-Everything works with no settings file. To change something, open
-`%USERPROFILE%\.vesper\config.toml` in Notepad (the button picker creates it) and add only the lines
-you want to change. [`config.example.toml`](config.example.toml) lists every setting, its default and what
-it does. Common ones:
+Everything works with no settings file. While Vesper runs, open http://localhost:8770 and press **Settings** to
+change her voice, microphone, push-to-talk, spending cap, callouts and more. Each change saves as you make it.
 
-| To change | Setting |
-|---|---|
-| Her voice, speed or volume | `[voice] voice`, `rate`, `volume`. List voices with `.venv\Scripts\vesper copilot --voices` |
-| Which speakers or headset she uses | `[voice] output_device` (same list) |
-| Which microphone she hears | `[listen] mic` |
-| Daily spending cap | `[brain] daily_budget_usd` |
-| Fewer callouts | `[callouts] mode = "critical"`, or turn single callouts off under `[callouts.rules]` and `[lookout]` |
-| Mining readouts | `[mining] prospector` |
+Prefer a file? `%USERPROFILE%\.vesper\config.toml` holds the same settings and keeps your comments.
+[`config.example.toml`](config.example.toml) lists them all, including the few that are file-only.
 
-Restart Vesper after changing settings.
+## More voices
+
+The Voice list includes every Windows voice on your PC. For more natural voices that run offline, add
+[Piper](https://github.com/OHF-Voice/piper1-gpl):
+
+```powershell
+.venv\Scripts\pip install -e ".[voice,mcp,piper]"
+```
+
+Then download a voice from [Piper's voice list](https://huggingface.co/rhasspy/piper-voices), both its `.onnx` file
+and its `.onnx.json` file, into `%USERPROFILE%\.vesper\voices`. Restart Vesper and it appears in the Voice list.
+Each voice has its own license, listed in its `MODEL_CARD`.
 
 ## Second screen
 
 While Vesper runs, a live status page is at http://localhost:8770. To open it on a tablet or phone on your
-network, set `[dashboard] host = "0.0.0.0"` and browse to `http://<your PC's name or IP>:8770`.
+network, set `[dashboard] host = "0.0.0.0"` and browse to `http://<your PC's name or IP>:8770`. The page has no
+password, so anyone on your network can then see it. Settings can only be changed from the PC itself unless you also
+set `[dashboard] network_edit = true`.
 
 ## VR
 
@@ -149,7 +156,7 @@ and the home base can be changed through it, and those are shared with the voice
 | "Questions need a Claude API key" | Do step 2, then close PowerShell and open a new one |
 | Nothing happens when I hold the button | Run step 3 again. A button Elite also uses still works for Elite, so pick a FREE one |
 | "I couldn't hear that, so I've reconnected" | Your headset or mic was unplugged and plugged back in (a VR restart does this). Just say it again |
-| "I still can't hear anything. I'm listening to ..." | Windows' default mic is silent (often Steam Streaming Microphone). Set `[listen] mic` to part of your real mic's name, e.g. `mic = "Headset"` |
+| "I still can't hear anything. I'm listening to ..." | Windows' default mic is silent (often Steam Streaming Microphone). Pick another under Settings, or set `[listen] mic` to part of your real mic's name, e.g. `mic = "Headset"` |
 | She can't hear me, or hears the wrong thing | Set `[listen] mic` to part of your microphone's name. `whisper_model = "small.en"` is more accurate but slower |
 | Wrong voice or wrong speakers | `.venv\Scripts\vesper copilot --voices`, then set `[voice] voice` and `output_device` |
 | "No game data yet" | Play Elite once on this PC so it writes its journal, or check that Vesper is looking in your Saved Games folder |

@@ -4,6 +4,7 @@
 
 [ptt]                 # push-to-talk: hold it, speak, let go. Find yours with:
                       #   python -m elite_companion copilot --pick-button
+                      # or a Piper voice in %USERPROFILE%\.vesper\voices: "Piper en_GB-alan-medium", "Piper en_GB-vctk-medium p239"
                       # Press candidates; it says which ones Elite already uses and prints the lines to paste here.
 key = ""              # a keyboard key or mouse button: "F9", "Right Ctrl", "Mouse 4", "Numpad 0"...
 device = ""           # ...or a joystick, by the name the picker shows (e.g. "T16000M") or its USB id
@@ -76,6 +77,8 @@ mirror_command = ""         # optional: opens your mirror when none is showing, 
 enabled = true
 host = "127.0.0.1"          # "0.0.0.0" lets a tablet or phone on your network open http://<this PC>:8770
 port = 8770
+editable = true             # false = the page shows the settings but can't change them
+network_edit = false        # true = other devices on your network can change settings too (there's no password)
 
 [eddn]
 enabled = false             # upload the market screens you open to EDDN (the feed Spansh, Inara and EDSM use)

@@ -59,11 +59,35 @@ THINK_HARDER_SPEC = {
                    "Never for simple lookups, status, prices or notes. Its answer is returned to you: say it as is.",
     "input_schema": {"type": "object", "properties": {"reason": {"type": "string"}}},
 }
-LOCAL_RULE = ("\n\nYOU ARE THE LOCAL MODEL ({model}, running on the commander's own hardware), not Claude and not "
-              "the cloud. If asked, say so plainly; saying \"go cloud\" switches back. You can't switch modes yourself."
-              "\n\nTOOL RULE: the live line below only covers location, ship, fuel, hold, threats and notes. "
-              "For anything else (missions, prices, stations, loadout, routes, materials, locker) call a tool "
-              "first. Never state a number that didn't come from a tool result or the live line.\n\n")
+def local_rule(model: str) -> str:
+    return (f"\n\nYOU ARE THE LOCAL MODEL ({model}, running on the commander's own hardware), not Claude and not "
+            "the cloud. If asked, say so plainly; saying \"go cloud\" switches back. You can't switch modes yourself."
+            "\n\nTOOL RULE: the live line only covers location, ship, fuel, hold, threats and notes. "
+            "For anything else (missions, prices, stations, loadout, routes, materials, locker) call a tool "
+            "first. Never state a number that didn't come from a tool result or the live line."
+            "\n\nACTION RULE: saving a note or preference, copying, or any other action only happens when you "
+            "call its tool. Never say you saved, remembered, copied or did something unless a tool result "
+            "confirms it."
+            "\n\nANSWER RULE: after a tool result, say the actual answer from it: name the station, system "
+            "and price that was asked about. Copying a name to the clipboard never replaces saying it.\n\n")
+
+
+# A local model claiming it did something without calling a tool that does it: one said "I'll remember" and saved
+# nothing, and "I've copied the system name" after only plotting a route.
+ACTION_TOOLS = {"remember", "forget_note", "add_preference", "remove_preference", "set_my_name", "set_home_base",
+                "copy_to_clipboard", "paste_clipboard", "write_captains_log"}
+CLAIMED_ACTION = re.compile(r"\b(?:i'll|i will|i've|i have|i)\s+(?:also\s+|just\s+|now\s+|already\s+)?"
+                            r"(?:remember(?:ed)?|saved?|noted?|cop(?:y|ied)|add(?:ed)?|set|forg[eo]t(?:ten)?|removed?)\b"
+                            r"|\bcopied\b(?:\s+\w+){0,4}\s+to\s+your\s+clipboard",
+                            re.I)
+# Right beside the live line. Next to the question, one model answered "what missions" from the turn-ins alone,
+# so local mode's live line leaves those out too.
+LIVE_RULE = ("Live line. It is only a summary: for missions, prices, stations, loadout, routes or materials, "
+             "call a tool first even if they're mentioned here. ")
+# After copying a name, one model talked only about the copy and dropped the answer it had found.
+AFTER_COPY = " Now say the actual answer from the earlier tool result, with its names and numbers."
+CLAIM_CHECK = ("(Automatic check, not from the commander: you said you did that, but you called no tool that does it, "
+               "so nothing happened. Call the right tool now, or say plainly that you didn't do it.)")
 # Tools a local model doesn't get: they send screenshots, and most local models can't read images.
 LOCAL_BLOCKED = {"look_at_screen", "read_contacts"}
 WEB_SEARCH_NEW = {"claude-opus-5-5", "claude-opus-5", "claude-sonnet-5-5", "claude-sonnet-5", "claude-fable-5-1",
@@ -300,7 +324,7 @@ class Brain:
             }) + "\n")
         return cost
 
-    def _context_line(self) -> str:
+    def _context_line(self, turn_ins: bool = True) -> str:
         """The live state line put in front of each question: where, ship, fuel, cargo, saved
         notes and so on, so simple questions need no tool call.
         """
@@ -323,9 +347,9 @@ class Brain:
         lost = [m["name"] for m in self.tools.missions()["missions"] if m["status"].startswith("MISSION CARGO LOST")]
         cargo_line = (f"Hold: {cargo}" + (f"; mission cargo: {mission_cargo}" if mission_cargo else "")
                       + (f"; mission cargo LOST for: {'; '.join(lost)}" if lost else "") + ".")
-        turn_ins = self.tools.turn_ins()
-        if turn_ins:
-            cargo_line += f" Missions ready to turn in at: {'; '.join(turn_ins)}."
+        ready = self.tools.turn_ins() if turn_ins else None
+        if ready:
+            cargo_line += f" Missions ready to turn in at: {'; '.join(ready)}."
         prof = self.tools.notes.profile()
         me = f"Your name: {prof['name']}. " if prof.get("name") else ""
         prefs = ("Standing preferences: " + " | ".join(p.rstrip(".") for p in prof["preferences"]) + ". ") if prof.get("preferences") else ""
@@ -450,7 +474,8 @@ class Brain:
     def warm_local(self) -> bool:
         """Load the local model (llama-swap loads on first request; can take half a minute)."""
         try:
-            self._local_post([{"role": "user", "content": "Say OK."}], tools=False, max_tokens=5)
+            # The full instructions and tool list, so the first real question finds them already read.
+            self._local_post([self._local_system(), {"role": "user", "content": "Say OK."}], max_tokens=1)
             return True
         except (OSError, KeyError, ValueError):
             log.exception("local model warm-up failed")
@@ -479,6 +504,9 @@ class Brain:
                                 "output": u.get("completion_tokens", 0), "cost_usd": 0}) + "\n")
         return data["choices"][0]["message"]
 
+    def _local_system(self) -> dict:
+        return {"role": "system", "content": self._system() + local_rule(self.local_cfg.get("model") or "local model")}
+
     def _ask_local(self, question: str) -> str:
         """Answer with the local model: the same tool loop as Claude, over the OpenAI chat format."""
         idle = time.monotonic() - self.last_asked > self.idle_reset_s
@@ -486,23 +514,33 @@ class Brain:
             self.reset()
         self.turns += 1
         self.last_asked = time.monotonic()
-        # The live line goes in the system message: inside the question, local models answer from it
-        # (and invent the rest) instead of calling tools.
-        system = {"role": "system", "content": self._system() + LOCAL_RULE.format(model=self.local_cfg.get("model") or "a local model")
-                  + self._context_line()}
+        # The live line is a system message: inside the question, local models answer from it (and invent
+        # the rest) instead of calling tools. It stays apart from the instructions, just before the question,
+        # because its clock changes every minute and llama.cpp rereads everything after the first change.
+        # Joined to the instructions, that cost 41.6 s on one model; apart, 2.2 s.
+        system, live = self._local_system(), {"role": "system", "content": LIVE_RULE + self._context_line(turn_ins=False)}
+        asked_at = len(self.local_history)
         messages = self.local_history + [{"role": "user", "content": question}]
         said = ""
+        took_action = checked_claim = False
         try:
             for _ in range(MAX_TOOL_ROUNDS):
-                msg = self._local_post([system] + messages)
+                msg = self._local_post([system] + messages[:asked_at] + [live] + messages[asked_at:])
                 calls = msg.get("tool_calls") or []
                 text = re.sub(r"<think>.*?</think>", "", msg.get("content") or "", flags=re.S).strip()
                 said = text or said
                 messages.append({"role": "assistant", "content": msg.get("content") or "",
                                  **({"tool_calls": calls} if calls else {})})
                 if not calls:
+                    if not took_action and CLAIMED_ACTION.search(text):
+                        if not checked_claim:
+                            checked_claim = True
+                            messages.append({"role": "user", "content": CLAIM_CHECK})
+                            continue
+                        said = "I didn't actually do that. Try asking again, or say go cloud."
                     self.local_history = messages
                     return said or "I don't have an answer for that."
+                took_action = took_action or any(c["function"]["name"] in ACTION_TOOLS for c in calls)
                 slow = [c["function"]["name"] for c in calls if c["function"]["name"] in SLOW_TOOLS]
                 if slow and self.on_slow_tool:
                     self.on_slow_tool(SLOW_TOOLS[slow[0]])
@@ -516,11 +554,13 @@ class Brain:
                             out = json.dumps(call_tool(self.tools, name, args), default=str)
                     except (GameDataError, TypeError, ValueError) as e:
                         out = f"Error: {e}"
+                    if name == "copy_to_clipboard":
+                        out += AFTER_COPY
                     messages.append({"role": "tool", "tool_call_id": c.get("id", ""), "content": out[:12000]})
         except OSError as e:  # URLError, HTTPError and timeouts
             log.warning("local model failed: %s", e)
             self.local_history = []
-            return "I can't reach the local model. Say go cloud to switch back to Claude."
+            return local_failure(e, self.local_cfg.get("timeout_seconds", 120))
         self.local_history = []
         return "That took too many steps; try asking a simpler way."
 
@@ -608,6 +648,17 @@ def _plain(history: list[dict]) -> list[dict]:
     while out and out[0]["role"] != "user":
         out.pop(0)
     return out
+
+
+def local_failure(e: OSError, timeout_seconds: float) -> str:
+    """What went wrong with the local model, spoken: too slow, an error from it, or no connection at all."""
+    back = "Say go cloud to switch back to Claude."
+    if isinstance(e, urllib.error.HTTPError):
+        return f"The local model returned an error, status {e.code}. {back}"
+    if isinstance(e, TimeoutError):  # connected, then no answer. Timing out while connecting arrives as a URLError
+        return (f"The local model didn't answer within {timeout_seconds:g} seconds, so it may just be slow. "
+                f"You can give it longer on the dashboard's Settings page. {back}")
+    return f"I can't reach the local model. {back}"
 
 
 def spoken_error(e: Exception) -> str:

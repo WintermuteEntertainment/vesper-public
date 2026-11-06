@@ -4,26 +4,50 @@ Runs inside the co-pilot (see [dashboard] in config.toml), or on its own:
 
     vesper dashboard [--port 8770]
 
-Then open http://<this PC's address>:8770 on the tablet. Read-only: it only shows game state.
+Then open http://<this PC's address>:8770 on the tablet. It shows game state, and its Settings page can
+change Vesper's settings (see settings.py for which, and [dashboard] editable to turn that off).
 """
 
 from __future__ import annotations
 
+import ipaddress
 import json
 import logging
+import socket
 import threading
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 
 from . import history
 from .lookout import SCOOPABLE
 from .state import _seconds_between
+from .settings import Settings
 from .tools import GameDataError, GameTools
 
 log = logging.getLogger(__name__)
 PAGE = Path(__file__).parent / "web" / "dashboard.html"
 PIPS = ("sys", "eng", "wep")
+MAX_POST = 4096
+
+
+def trusted_request(host: str | None, origin: str | None) -> bool:
+    """Is this request from a page of ours? The settings have no password, so a web page open somewhere on this
+    network mustn't be able to reach them: not directly (its Origin would differ), and not by pointing its own
+    domain name at this PC (the address would be a name we don't recognise)."""
+    name = (urlsplit("//" + (host or "")).hostname or "").lower()
+    try:
+        ipaddress.ip_address(name)
+        known = True
+    except ValueError:
+        known = name in ("localhost", socket.gethostname().lower()) or name.endswith((".ts.net", ".local"))
+    return known and (not origin or urlsplit(origin).netloc.lower() == (host or "").lower())
+
+
+def may_edit(client_ip: str, network_edit: bool) -> bool:
+    """May this device change settings? The PC running Vesper always can; others only with [dashboard] network_edit."""
+    return network_edit or ipaddress.ip_address(client_ip).is_loopback
 
 
 def dashboard_state(tools: GameTools) -> dict:
@@ -77,20 +101,62 @@ def _mining(tools: GameTools) -> dict | None:
         return None
 
 
-def serve(tools: GameTools, host: str = "0.0.0.0", port: int = 8770) -> ThreadingHTTPServer:
+def serve(tools: GameTools, host: str = "0.0.0.0", port: int = 8770,
+          settings: Settings | None = None) -> ThreadingHTTPServer:
     """Start the dashboard in a background thread and return the server."""
+    settings = settings or Settings()
 
     class Handler(BaseHTTPRequestHandler):
+        def _json(self, data: dict, code: int = 200) -> None:
+            self._send(json.dumps(data, default=str).encode(), "application/json", code)
+
+        def _trusted(self) -> bool:
+            if trusted_request(self.headers.get("Host"), self.headers.get("Origin")):
+                return True
+            self._json({"error": "Settings can't be reached from there."}, 403)
+            return False
+
         def do_GET(self):
-            if self.path.split("?")[0] == "/api/state":
-                body = json.dumps(dashboard_state(tools), default=str).encode()
-                kind = "application/json"
+            url = urlsplit(self.path)
+            if url.path == "/api/state":
+                self._json(dashboard_state(tools))
+            elif url.path == "/api/settings":
+                if self._trusted():
+                    state = settings.state(refresh="refresh" in parse_qs(url.query))
+                    if not may_edit(self.client_address[0], settings.network_edit):
+                        state["editable"], state["pc_only"] = False, True
+                    self._json(state)
             elif self.path in ("/", "/index.html"):
-                body, kind = PAGE.read_bytes(), "text/html; charset=utf-8"
+                self._send(PAGE.read_bytes(), "text/html; charset=utf-8")
             else:
                 self.send_error(404)
+
+        def do_POST(self):
+            if self.path != "/api/settings":
+                self.send_error(404)
                 return
-            self.send_response(200)
+            if not self._trusted():
+                return
+            if not may_edit(self.client_address[0], settings.network_edit):
+                self._json({"error": "Settings can only be changed on the PC running Vesper."}, 403)
+                return
+            length = int(self.headers.get("Content-Length") or 0)
+            if self.headers.get("Content-Type", "").split(";")[0].strip() != "application/json" or not 0 < length <= MAX_POST:
+                self._json({"error": "That isn't a settings change."}, 400)
+                return
+            try:
+                data = json.loads(self.rfile.read(length))
+                self._json(settings.change(data["key"], data["value"]))
+            except (KeyError, TypeError):
+                self._json({"error": "That isn't a settings change."}, 400)
+            except ValueError as e:  # includes SettingError, and a config.toml it couldn't edit or read
+                self._json({"error": str(e)}, 400)
+            except OSError as e:
+                log.exception("couldn't save a setting")
+                self._json({"error": f"Couldn't save config.toml: {e}"}, 500)
+
+        def _send(self, body: bytes, kind: str, code: int = 200) -> None:
+            self.send_response(code)
             self.send_header("Content-Type", kind)
             self.send_header("Cache-Control", "no-store")
             self.send_header("Content-Length", str(len(body)))

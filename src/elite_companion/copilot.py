@@ -200,11 +200,64 @@ class Copilot:
         if d["enabled"]:
             try:
                 from .dashboard import serve
-                serve(self.tools, d["host"], int(d["port"]))
+                from .settings import Settings
+                serve(self.tools, d["host"], int(d["port"]),
+                      Settings(self.cfg, apply=self.apply_setting, devices=self._devices,
+                               live_value=self._live_setting, note=self._setting_note))
                 print(f"Dashboard: http://localhost:{d['port']}", flush=True)
             except OSError as e:
                 log.warning("dashboard didn't start: %s", e)
         self.log("--", f"co-pilot started (model {self.cfg['brain']['model'] if self.brain else 'none'})")
+
+    # ---- settings changed from the dashboard ----
+
+    def apply_setting(self, key: str, value) -> None:
+        """Put a changed setting into what's running. self.cfg is already updated."""
+        section, name = key.split(".", 1)
+        if section == "voice":
+            if self.speaker:
+                v = self.cfg["voice"]
+                self.speaker.update(v["voice"], v["rate"], v["volume"], v["output_device"])
+                self.say("Voice settings changed.")
+        elif key == "listen.mic":
+            if self.recorder and not self.recorder.set_mic(value):
+                self.say("You were holding push-to-talk, so the microphone will switch after a restart.")
+        elif key == "callouts.mode":
+            self.callouts.set_mode(value)
+        elif section == "callouts":
+            rule_id = name.split(".")[1]
+            next(r for r in self.callouts.rules if r.id == rule_id).enabled = value
+        elif section == "lookout":
+            (self.lookout.enabled if name in self.lookout.enabled else self.lookout.checklist)[name] = value
+        elif key == "mining.prospector":
+            self.mining.style = value
+        elif key == "eddn.enabled":
+            self.markets.eddn = value
+        elif section == "brain" and self.brain:
+            if name in ("model", "effort", "hard_model", "hard_effort"):
+                setattr(self.brain, name, value)
+            elif name == "daily_budget_usd":
+                self.brain.budget = value
+            elif name == "max_history_turns":
+                self.brain.max_turns = value
+            elif name == "idle_reset_minutes":
+                self.brain.idle_reset_s = value * 60
+        # local.model and local.timeout_seconds: the brain reads them from self.cfg["local"] each time
+
+    def _devices(self, key: str, refresh: bool = False) -> list[str]:
+        from .settings import default_devices
+        if key == "listen.mic" and refresh and self.recorder:
+            self.recorder.reconnect()  # the audio library's list dates from when it started: read it again
+        return default_devices(key)
+
+    def _live_setting(self, key: str):
+        """Voice commands can change the callout mode, so show what it really is."""
+        return self.callouts.mode if key == "callouts.mode" else None
+
+    def _setting_note(self, key: str) -> str:
+        if key == "listen.mic" and self.recorder:
+            return f"Recording from {self.recorder.name()}."
+        return ""
 
     # ---- questions ----
 
@@ -339,7 +392,7 @@ class Copilot:
                         self.say("I couldn't hear that, so I've reconnected to the microphone. Say it again.")
                     else:
                         self.say(f"I still can't hear anything. I'm listening to {self.recorder.name()}, "
-                                 "and it's silent. Set [listen] mic in your config.toml.")
+                                 "and it's silent. You can pick another on the dashboard's Settings page.")
                     return
                 self._silent_presses = 0
                 heard = strip_echo(self.transcriber.transcribe(audio, self.name_hints()),
