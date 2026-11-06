@@ -39,6 +39,9 @@ DEFAULTS: dict = {
     "controls": {
         "nicknames": {},        # what you call your devices, for binding answers: { T16000M = "right stick" }
     },
+    "language": {
+        "code": "en",           # what you speak and Vesper answers in: en, fr, de, es, ru, pt...
+    },
     "listen": {
         "mic": "",              # part of the microphone name; blank = Windows default
         "whisper_model": "base.en",

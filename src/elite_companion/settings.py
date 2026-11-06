@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Callable
 
 from . import config as config_mod
+from . import language
 
 log = logging.getLogger(__name__)
 
@@ -51,6 +52,7 @@ def groups() -> list[tuple[str, list[Field]]]:
             Field("listen.whisper_device", "Run speech recognition on", "choice", live=False, choices=("cpu", "cuda"),
                   help="cuda is the graphics card: faster, but it competes with the game."),
         ]),
+        ("Language", [Field("language.code", "Language", "choice", live=False, choices=tuple(language.NAMES))]),
         ("Voice", [
             Field("voice.voice", "Voice", "device"),
             Field("voice.output_device", "Speak through", "device"),
@@ -214,7 +216,7 @@ class Settings:
             out["value"] = ", ".join(str(b) for b in value)
         if field.kind == "choice":
             have = list(field.choices) + ([value] if value not in field.choices else [])
-            out["choices"] = [{"value": c, "label": c or "Never"} for c in have]
+            out["choices"] = [{"value": c, "label": language.name(c) if field.key == "language.code" else c or "Never"} for c in have]
         if field.kind == "device":
             out["choices"] = device_choices(value, self.devices(field.key, refresh), "Windows default")
         if self.running is not None and not field.locked and override is None:

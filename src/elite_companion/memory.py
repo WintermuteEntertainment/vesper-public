@@ -22,6 +22,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Callable
 
+from .phrases import t
 from .config import HOME
 
 MEMORY_PATH = HOME / "memory.json"
@@ -244,7 +245,7 @@ class Reminders:
             return
         self.store.mark_done({n["id"] for n in notes})
         for n in notes:
-            self.say(f"Reminder. {n['text']}")
+            self.say(t("reminder", text=n["text"]))
 
     def _on_docked(self, ev) -> None:
         """Dock reminders for this station or system (or anywhere)."""

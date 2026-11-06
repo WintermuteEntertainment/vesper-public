@@ -11,6 +11,7 @@ from __future__ import annotations
 
 from typing import Callable
 
+from .phrases import t
 from .speech import NORMAL
 from .state import _seconds_between
 
@@ -50,6 +51,11 @@ def verdict(prospect: dict, target: str | None = None) -> str:
     return "Skip"
 
 
+# verdict() answers in English for the tools; what's spoken goes through the phrase table.
+VERDICT_KEYS = {"Crack it": "verdict_crack", "Crack it, and laser it too": "verdict_crack_laser",
+                "Mine it": "verdict_mine", "Worth a few chunks": "verdict_few_chunks", "Skip": "verdict_skip"}
+
+
 def readout(prospect: dict, style: str = "full", target: str | None = None) -> str | None:
     """What to say about a prospected rock, in the [mining] prospector style:
     full = content, every material, core, what's left, then the verdict;
@@ -59,19 +65,20 @@ def readout(prospect: dict, style: str = "full", target: str | None = None) -> s
     v = verdict(prospect, target)
     if style == "off" or (style == "good" and v == "Skip"):
         return None
+    said = t(VERDICT_KEYS[v])
     if style in ("verdict", "good"):
         best = max(prospect.get("materials", {}).items(), key=lambda kv: kv[1], default=None)
-        lead = f"Core: {prospect['core']}. " if prospect.get("core") else (
-            f"{best[0]} {round(best[1])} percent. " if best else "")
-        return f"{lead}{v}."
+        lead = t("core", core=prospect["core"]) + ". " if prospect.get("core") else (
+            t("material_percent", material=best[0], pct=round(best[1])) + ". " if best else "")
+        return f"{lead}{said}."
     mats = sorted(prospect.get("materials", {}).items(), key=lambda kv: -kv[1])
-    parts = [f"{prospect['content']} content" if prospect.get("content") else ""]
-    parts.append(", ".join(f"{n} {round(p)} percent" for n, p in mats) or "no materials")
+    parts = [t("content", content=prospect["content"]) if prospect.get("content") else ""]
+    parts.append(", ".join(t("material_percent", material=n, pct=round(p)) for n, p in mats) or t("no_materials"))
     if prospect.get("core"):
-        parts.append(f"Core: {prospect['core']}")
+        parts.append(t("core", core=prospect["core"]))
     if prospect.get("remaining") is not None and prospect["remaining"] < 100:
-        parts.append(f"{round(prospect['remaining'])} percent left")
-    return ". ".join(p for p in parts if p) + f". {v}."
+        parts.append(t("percent_left", pct=round(prospect["remaining"])))
+    return ". ".join(p for p in parts if p) + f". {said}."
 
 
 def fit_check(modules: list[dict], cargo: dict, cargo_capacity: int | None) -> dict:
@@ -149,13 +156,13 @@ class MiningCallouts:
         for n in LIMPET_WARNINGS:
             if limpets <= n and (session, "limpets", n) not in self.warned:
                 self.warned.update((session, "limpets", k) for k in LIMPET_WARNINGS if k >= limpets)
-                self._speak("Out of limpets." if limpets == 0 else f"{limpets} limpets left.")
+                self._speak(t("out_of_limpets") if limpets == 0 else t("limpets_left", n=limpets))
                 break
         cap = s.ship.cargo_capacity
         used = sum(c for c in s.cargo.values() if isinstance(c, (int, float)))
         if cap and used >= cap and (session, "full") not in self.warned:
             self.warned.add((session, "full"))
-            self._speak("Hold full.")
+            self._speak(t("hold_full"))
         elif cap and cap - used <= max(4, cap * 0.05) and (session, "nearly") not in self.warned:
             self.warned.add((session, "nearly"))
-            self._speak(f"Hold nearly full, {cap - used} tons left.")
+            self._speak(t("hold_nearly_full", n=cap - used))

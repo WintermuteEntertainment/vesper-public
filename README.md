@@ -114,6 +114,38 @@ Then download a voice from [Piper's voice list](https://huggingface.co/rhasspy/p
 and its `.onnx.json` file, into `%USERPROFILE%\.vesper\voices`. Restart Vesper and it appears in the Voice list.
 Each voice has its own license, listed in its `MODEL_CARD`.
 
+## Other languages
+
+Vesper can hear you and answer in other languages. Add this to `config.toml`, with your language's
+two-letter code (fr, de, es, ru, pt, it, nl, pl...):
+
+```toml
+[language]
+code = "fr"
+```
+
+- **Hearing:** the speech recognition model switches to its multilingual version. It's the same size
+  (141 MB), downloaded once on the next start.
+- **Answers:** Claude answers in your language. Game names stay as the game spells them.
+- **Voice:** with `[voice] voice` left blank, Vesper picks the first Windows voice for your language. Add one
+  in Windows Settings > Time & language > Speech > Add voices, then check it shows up with
+  `.venv\Scriptsesper copilot --voices`.
+
+- **Callouts and commands:** French (fr), German (de), Spanish (es), Russian (ru) and Brazilian Portuguese (pt)
+  have translated callouts, readouts and short commands ("silence", "Ruhe", "тишина"...). In any language
+  you can also just ask her to mute or restore the callouts. Other languages fall back to English callouts.
+
+The translations are first drafts written with Claude and not yet checked by native speakers. Corrections
+are very welcome.
+
+### Improving a translation
+
+Each language is one file in [`src/elite_companion/locales/`](src/elite_companion/locales). The English
+originals, and what every line is for, are in [`phrases.py`](src/elite_companion/phrases.py). Keep the
+words in braces (`{pilot}`, `{n}`) as they are, though you may leave some out. A phrase with "one" and "other"
+(plus "few" and "many" in Russian and Polish) is chosen by the number. To add a language, copy a file, name it
+after the language's two-letter code, and translate it. Run the tests to check your file.
+
 ## Second screen
 
 While Vesper runs, a live status page is at http://localhost:8770. To open it on a tablet or phone on your
