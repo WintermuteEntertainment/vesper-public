@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0a1 (alpha, not yet released)
+## 0.1.0a1 (2026-11-06)
 
 First alpha.
 
@@ -11,6 +11,8 @@ First alpha.
   into French, German, Spanish, Russian and Brazilian Portuguese. Those translations are drafts by Claude, not yet
   checked by native speakers.
 - More voices: Windows' newer voices now appear, and Piper's offline voices work as an optional extra.
-- Local models: much faster follow-up questions, and they can't say they saved or copied something without
-  calling a tool that does it. A clearer message when a local model is too slow.
+- Local models: follow-up questions can be much faster, and if one says it saved or copied something without calling
+  a tool that does it, it's asked to do it or admit it didn't. A clearer message when a local model is too slow.
+- A settings file saved with a byte-order mark now loads, and a typo gets a plain message instead of a crash.
+- The status page explains itself when there's no game data yet.
 - Joystick reads now run one at a time, as a precaution against crashes in Windows' joystick system.
