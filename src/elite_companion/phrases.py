@@ -95,7 +95,7 @@ EN: dict[str, str | dict[str, str]] = {
     "reminder": "Reminder. {text}",
     # ---- the copilot ----
     "online": "Co-pilot online.",
-    "needs_api_key": "Questions need a Claude API key. Set ANTHROPIC_API_KEY and restart me.",
+    "needs_api_key": "Questions need a Claude API key or a local model. The read me explains both.",
     "callouts_off": "Callouts off.",
     "callouts_critical": "Critical callouts only.",
     "callouts_on": "Callouts on.",
@@ -132,6 +132,8 @@ EN: dict[str, str | dict[str, str]] = {
     # ---- spoken errors ----
     "cant_help": "I can't help with that one.",
     "too_many_steps": "That took too many steps; try asking a simpler way.",
+    "speech_on_cpu": "I can't use the graphics card for speech recognition, so I'm using the CPU.",
+    "speech_failed": "Speech recognition failed, so I didn't catch that.",
     "cant_reach_local": "I can't reach the local model. Say go cloud to switch back to Claude.",
     "local_error": "The local model returned an error, status {code}. Say go cloud to switch back to Claude.",
     "local_too_slow": "The local model didn't answer within {seconds} seconds, so it may just be slow. You can give it longer on the dashboard's Settings page. Say go cloud to switch back to Claude.",

@@ -69,7 +69,7 @@
     "reminder": "Erinnerung. {text}",
 
     "online": "Kopilot bereit.",
-    "needs_api_key": "Für Fragen brauche ich einen Claude-API-Schlüssel. Setzen Sie ANTHROPIC_API_KEY und starten Sie mich neu.",
+    "needs_api_key": "Für Fragen brauche ich einen Claude-API-Schlüssel oder ein lokales Modell. Die README erklärt beides.",
     "callouts_off": "Ansagen aus.",
     "callouts_critical": "Nur kritische Ansagen.",
     "callouts_on": "Ansagen an.",
@@ -106,6 +106,8 @@
 
     "cant_help": "Dabei kann ich nicht helfen.",
     "too_many_steps": "Das hat zu viele Schritte gebraucht; versuchen Sie es einfacher zu fragen.",
+    "speech_on_cpu": "Ich kann die Grafikkarte nicht für die Spracherkennung nutzen, deshalb nutze ich den Prozessor.",
+    "speech_failed": "Die Spracherkennung ist fehlgeschlagen, ich habe das nicht verstanden.",
     "cant_reach_local": "Ich erreiche das lokale Modell nicht. Sagen Sie go cloud, um zu Claude zurückzukehren.",
     "local_error": "Das lokale Modell hat einen Fehler gemeldet, Status {code}. Sagen Sie go cloud, um zu Claude zurückzukehren.",
     "local_too_slow": "Das lokale Modell hat nicht innerhalb von {seconds} Sekunden geantwortet, vielleicht ist es nur langsam. In den Dashboard-Einstellungen können Sie ihm mehr Zeit geben. Sagen Sie go cloud, um zu Claude zurückzukehren.",

@@ -69,7 +69,7 @@
     "reminder": "Lembrete. {text}",
 
     "online": "Copiloto online.",
-    "needs_api_key": "Para perguntas preciso de uma chave de API do Claude. Defina ANTHROPIC_API_KEY e me reinicie.",
+    "needs_api_key": "Para perguntas preciso de uma chave de API do Claude ou de um modelo local. O README explica as duas opções.",
     "callouts_off": "Avisos desligados.",
     "callouts_critical": "Só avisos críticos.",
     "callouts_on": "Avisos ligados.",
@@ -106,6 +106,8 @@
 
     "cant_help": "Não posso ajudar com isso.",
     "too_many_steps": "Isso exigiu passos demais; tente perguntar de um jeito mais simples.",
+    "speech_on_cpu": "Não consigo usar a placa de vídeo para o reconhecimento de voz, então estou usando o processador.",
+    "speech_failed": "O reconhecimento de voz falhou, não entendi.",
     "cant_reach_local": "Não consigo falar com o modelo local. Diga go cloud para voltar ao Claude.",
     "local_error": "O modelo local retornou um erro, status {code}. Diga go cloud para voltar ao Claude.",
     "local_too_slow": "O modelo local não respondeu em {seconds} segundos, talvez esteja só lento. Você pode dar mais tempo a ele nas configurações do painel. Diga go cloud para voltar ao Claude.",

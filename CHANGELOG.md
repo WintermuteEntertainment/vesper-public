@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- No API key or subscription needed: the README now shows how to run on a free local model, and Vesper offers that
+  route when there's no key.
+- Speech recognition on an NVIDIA card is now an optional install, `.[gpu]`. If the card can't do it, Vesper uses the CPU
+  and says so. A speech failure is now spoken, where it used to drop the question silently.
+
 ## 0.1.0a1 (2026-11-06)
 
 First alpha.

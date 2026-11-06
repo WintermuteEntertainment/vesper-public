@@ -418,6 +418,9 @@ class Copilot:
         print("Loading speech recognition...", flush=True)
         lang = language.code(self.cfg)
         self.transcriber = Transcriber(language.whisper_model(l["whisper_model"], lang), l["whisper_device"], lang)
+        if self.transcriber.fell_back:
+            print("Speech recognition can't use the graphics card, so it's using the CPU. See More speech options in the README.", flush=True)
+            self.say(t("speech_on_cpu"))
         if p.get("key"):
             self.ptt = KeyPushToTalk(p["key"], self._on_press, self._on_release)
             print(f"Push-to-talk: {p['key']}", flush=True)
@@ -457,6 +460,9 @@ class Copilot:
                 if heard:
                     print(f"? {heard}", flush=True)
                     self.handle_text(heard)
+            except Exception:  # noqa: BLE001 - this thread would otherwise die silently
+                log.exception("speech recognition failed")
+                self.say(t("speech_failed"))
             finally:
                 self._busy.release()
         threading.Thread(target=work, name="question", daemon=True).start()
@@ -469,7 +475,7 @@ class Copilot:
         mode = self.cfg["callouts"]["mode"]
         print(f"Co-pilot running. Callouts: {mode}.", flush=True)
         if self.brain is None:
-            print("Questions: off (no ANTHROPIC_API_KEY).", flush=True)
+            print("Questions: off. Add an API key or a local model, see the README.", flush=True)
         elif not self.cfg["ptt"].get("key") and not int(self.cfg["ptt"]["button"]):
             print("Push-to-talk: no button set. Run `vesper copilot --pick-button`, then add it to config.toml.", flush=True)
         else:

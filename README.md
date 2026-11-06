@@ -15,8 +15,8 @@ with one exception: when you say "paste", she presses Ctrl+V for you (for the ga
 - [Python](https://www.python.org/downloads/) 3.11 or newer. In the installer, tick **Add python.exe to PATH**.
 - [Git](https://git-scm.com/download/win), or use **Code > Download ZIP** on GitHub and unzip it instead.
 - A microphone, and a key, mouse button or joystick button to hold while you talk.
-- An Anthropic API key for questions. Callouts work without one.
-  Everyday questions cost about a tenth of a cent each, with a daily budget cap (default $1).
+- For questions, either an Anthropic API key or [a free local model](#no-api-key-use-a-local-model). Callouts work with neither.
+  With Claude, everyday questions cost about a tenth of a cent each, with a daily budget cap (default $1).
 - About 390 MB of disk space for Vesper and its packages, plus 141 MB for the speech recognition model.
 
 ## Quick start
@@ -39,7 +39,7 @@ API keys; the account needs some credit), then save it for your Windows user:
 setx ANTHROPIC_API_KEY "sk-ant-your-key-here"
 ```
 
-Skip this step to use callouts only.
+Skip this step if you'll [use a local model](#no-api-key-use-a-local-model), or just want callouts.
 
 **3. Choose your push-to-talk button.**
 
@@ -100,6 +100,39 @@ change her voice, microphone, push-to-talk, spending cap, callouts and more. Eac
 
 Prefer a file? `%USERPROFILE%\.vesper\config.toml` holds the same settings and keeps your comments.
 [`config.example.toml`](config.example.toml) lists them all, including the few that are file-only.
+
+## No API key? Use a local model
+
+Vesper doesn't need Claude, an API key or a subscription. She can use a model on your own graphics card, through any
+OpenAI-compatible server such as [Ollama](https://ollama.com/) or [LM Studio](https://lmstudio.ai/). Start your server,
+then add this to `%USERPROFILE%\.vesper\config.toml`:
+
+```toml
+[local]
+base_url = "http://localhost:11434/v1"   # Ollama. LM Studio is http://localhost:1234/v1
+model = "the-model-name-your-server-uses"
+start_local = true
+```
+
+- **The model needs to support tool calling**, because that's how she reads your game.
+- **It competes with the game.** A model on your graphics card can cut your frame rate, especially in VR. Answers are
+  also slower and less reliable than Claude's, depending on your model and hardware.
+- **What still goes online:** the first download of the speech model, and galaxy lookups such as prices, routes and GalNet.
+  These are free and need no account.
+- **What needs Claude:** the captain's log, and asking her to look at your screen. Web search needs Claude or your own
+  SearXNG server.
+
+## More speech options
+
+Speech recognition runs on your CPU by default, which leaves the graphics card to the game. A short question took under
+a second on the CPU of the PC it was tested on, so you may not need more. To run it on an NVIDIA card instead, install NVIDIA's libraries
+(about 1.3 GB to download, 2 GB on disk) and choose `cuda` under **Settings > Microphone**, then restart Vesper:
+
+```powershell
+.venv\Scripts\pip install -e ".[voice,mcp,gpu]"
+```
+
+If the graphics card can't do it, Vesper uses the CPU and tells you.
 
 ## More voices
 
@@ -185,7 +218,7 @@ and the home base can be changed through it, and those are shared with the voice
 
 | Problem | Try |
 |---|---|
-| "Questions need a Claude API key" | Do step 2, then close PowerShell and open a new one |
+| "Questions need a Claude API key or a local model" | Do step 2 and open a new PowerShell, or [set up a local model](#no-api-key-use-a-local-model) |
 | Nothing happens when I hold the button | Run step 3 again. A button Elite also uses still works for Elite, so pick a FREE one |
 | "I couldn't hear that, so I've reconnected" | Your headset or mic was unplugged and plugged back in (a VR restart does this). Just say it again |
 | "I still can't hear anything. I'm listening to ..." | Windows' default mic is silent (often Steam Streaming Microphone). Pick another under Settings, or set `[listen] mic` to part of your real mic's name, e.g. `mic = "Headset"` |

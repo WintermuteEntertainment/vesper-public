@@ -28,7 +28,7 @@ code = "en"                 # the language you speak and Vesper answers in: en, 
 [listen]
 mic = ""                    # part of the microphone name; blank = Windows default
 whisper_model = "base.en"   # tiny.en is faster, small.en more accurate (other languages drop the .en)
-whisper_device = "cpu"      # "cuda" is faster on NVIDIA cards but shares the GPU with the game
+whisper_device = "cpu"      # "cuda" uses an NVIDIA card: needs the README's GPU install, and shares the GPU with the game
 
 [brain]
 model = "claude-haiku-5-5"  # everyday answers: quick and cheap (about a tenth of a cent a question)

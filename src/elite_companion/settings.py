@@ -50,7 +50,7 @@ def groups() -> list[tuple[str, list[Field]]]:
             Field("listen.whisper_model", "Speech recognition model", "choice", live=False,
                   choices=("tiny.en", "base.en", "small.en"), help="tiny.en is faster, small.en more accurate."),
             Field("listen.whisper_device", "Run speech recognition on", "choice", live=False, choices=("cpu", "cuda"),
-                  help="cuda is the graphics card: faster, but it competes with the game."),
+                  help="cuda is the graphics card. It needs the optional GPU install and competes with the game."),
         ]),
         ("Language", [Field("language.code", "Language", "choice", live=False, choices=tuple(language.NAMES))]),
         ("Voice", [

@@ -1,13 +1,16 @@
 """Microphone capture while push-to-talk is held, and local speech-to-text (faster-whisper).
 
-Whisper runs on this PC, so what you say never leaves it until the text
-is sent to Claude. The model downloads once on first use (141 MB for base.en or base).
+Whisper runs on this PC, so what you say never leaves it until the text is sent to whichever model
+answers. The model downloads once on first use (141 MB for base.en or base).
 """
 
 from __future__ import annotations
 
 import logging
+import os
+import sys
 import threading
+from pathlib import Path
 
 import numpy as np
 
@@ -106,13 +109,34 @@ class Recorder:
             return np.concatenate(self._chunks)[:, 0] if self._chunks else np.zeros(0, dtype="float32")
 
 
+def _find_gpu_libraries() -> None:
+    """Point Windows at NVIDIA's libraries from the optional gpu install, which pip puts in site-packages.
+    It has to be this call: on this setup, adding those folders to PATH didn't help."""
+    for folder in (Path(sys.prefix) / "Lib" / "site-packages" / "nvidia").glob("*/bin"):
+        os.add_dll_directory(str(folder))
+
+
 class Transcriber:
-    """Local speech-to-text with faster-whisper. int8 on the CPU, float16 on an NVIDIA GPU."""
+    """Local speech-to-text with faster-whisper. int8 on the CPU, float16 on an NVIDIA GPU.
+
+    If the GPU can't do the work, this uses the CPU instead and sets `fell_back`, so a bad setting
+    can't leave push-to-talk failing on every press.
+    """
     def __init__(self, model: str = "base.en", device: str = "cpu", language: str = "en"):
         from faster_whisper import WhisperModel
         self.language = language
-        compute = "int8" if device == "cpu" else "float16"
-        self.model = WhisperModel(model, device=device, compute_type=compute)
+        self.fell_back = False
+        if device != "cpu":
+            try:
+                _find_gpu_libraries()
+                self.model = WhisperModel(model, device=device, compute_type="float16")
+                # It loads even without NVIDIA's libraries, which are only needed once it does real work.
+                list(self.model.transcribe(np.zeros(RATE, dtype="float32"), beam_size=1, vad_filter=False)[0])
+                return
+            except Exception:  # noqa: BLE001 - whatever went wrong, the CPU still works
+                log.warning("speech recognition can't use %s, using the CPU", device, exc_info=True)
+                self.fell_back = True
+        self.model = WhisperModel(model, device="cpu", compute_type="int8")
 
     def transcribe(self, audio: np.ndarray, hints: list[str] | None = None) -> str:
         """The text of one push-to-talk recording. Under 0.3 s returns "" (a button bump).

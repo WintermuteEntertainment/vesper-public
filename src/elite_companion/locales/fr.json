@@ -69,7 +69,7 @@
     "reminder": "Rappel. {text}",
 
     "online": "Copilote en ligne.",
-    "needs_api_key": "Les questions nécessitent une clé d'API Claude. Définissez ANTHROPIC_API_KEY et redémarrez-moi.",
+    "needs_api_key": "Les questions nécessitent une clé d'API Claude ou un modèle local. Le README explique les deux.",
     "callouts_off": "Annonces désactivées.",
     "callouts_critical": "Annonces critiques uniquement.",
     "callouts_on": "Annonces activées.",
@@ -106,6 +106,8 @@
 
     "cant_help": "Je ne peux pas vous aider avec ça.",
     "too_many_steps": "Ça a demandé trop d'étapes ; essayez de poser la question plus simplement.",
+    "speech_on_cpu": "Je ne peux pas utiliser la carte graphique pour la reconnaissance vocale, j'utilise donc le processeur.",
+    "speech_failed": "La reconnaissance vocale a échoué, je n'ai pas compris.",
     "cant_reach_local": "Je n'arrive pas à joindre le modèle local. Dites go cloud pour revenir à Claude.",
     "local_error": "Le modèle local a renvoyé une erreur, statut {code}. Dites go cloud pour revenir à Claude.",
     "local_too_slow": "Le modèle local n'a pas répondu en {seconds} secondes, il est peut-être simplement lent. Vous pouvez lui laisser plus de temps dans les réglages du tableau de bord. Dites go cloud pour revenir à Claude.",
