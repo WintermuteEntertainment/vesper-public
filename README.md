@@ -86,6 +86,7 @@ Start a question with "think hard about..." to send it to the stronger model.
 Anything else goes to Claude, which can use about 60 tools. Some examples:
 - Where am I? What's my fuel? What missions do I have left?
 - Best place to sell my silver? Best trades from here? Where should I sell this hold?
+- Copy that system to my clipboard. Then click the galaxy map search and say "paste".
 - Nearest material trader? Where can I buy a Python?
 - Who can engineer my FSD to grade 5? Can I afford grade 4 reinforced shields?
 - Plan a mining run. Where's the nearest Platinum hotspot? How's the mining going?
@@ -113,6 +114,9 @@ base_url = "http://localhost:11434/v1"   # Ollama. LM Studio is http://localhost
 model = "the-model-name-your-server-uses"
 start_local = true
 ```
+
+Once the address is in the file, you can change the model name, the timeout and "Start in local mode" under
+**Settings > Local model**. Say "go local" or "go cloud" to switch while she runs.
 
 - **The model needs to support tool calling**, because that's how she reads your game.
 - **It competes with the game.** A model on your graphics card can cut your frame rate, especially in VR. Answers are
@@ -162,7 +166,7 @@ code = "fr"
 - **Answers:** Claude answers in your language. Game names stay as the game spells them.
 - **Voice:** with `[voice] voice` left blank, Vesper picks the first Windows voice for your language. Add one
   in Windows Settings > Time & language > Speech > Add voices, then check it shows up with
-  `.venv\Scriptsesper copilot --voices`.
+  `.venv\Scripts\vesper copilot --voices`.
 
 - **Callouts and commands:** French (fr), German (de), Spanish (es), Russian (ru) and Brazilian Portuguese (pt)
   have translated callouts, readouts and short commands ("silence", "Ruhe", "тишина"...). In any language
